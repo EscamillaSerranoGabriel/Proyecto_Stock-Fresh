@@ -20,7 +20,7 @@
             <img src="icono_usuario_circulo.png" alt="Stock & Fresh" width="70" height="70">
         </div>
        
-            <button class="iniciosesion">Iniciar Sesión</button>
+                <button class="iniciosesion" onclick="cargarMain()">HOME</button>
        
                 <span class="cart">$ 0.00</span>
     </div>
@@ -36,7 +36,7 @@
         </ul>
     </nav>
         </header>
-        <main class="principal">
+        <main class="principal" >
             <div class="main-content">
         <h1>Bienvenido a <br><span>Stock & Fresh!</span></h1>
         
@@ -45,8 +45,8 @@
         estadísticas claras.</p>
         
         <div class="main-buttons">
-            <a href="#" class="btn btn-registrar">Registrarse</a>
-            <a href="#" class="btn btn-iniciar">Iniciar Sesión</a>
+            <button onclick="cargarRegistro()" class="btn-iniciar">Registrarse</button>
+            <button onclick="cargarLogin()" class="btn-iniciar">Iniciar Sesión</button>
         </div>
     </div>
 
@@ -58,37 +58,75 @@
         </div>
     </div>
         </main>
-        <footer>
-    <div class="footer-container">
-        <!-- Bloque 1: Ubicación -->
-        <div class="footer-section">
-            <h3>📍 Ubicación</h3>
-            <p>Av. Principal #123, Colonia Centro<br>Ciudad de México, CP 11000</p>
-        </div>
-
-        <!-- Bloque 2: Contacto -->
-        <div class="footer-section">
-            <h3>📞 Contacto</h3>
-            <ul>
-                <li>Teléfono: (55) 1234-5678</li>
-                <li>Soporte: info@stockandfresh.com</li>
-            </ul>
-        </div>
-
-        <!-- Bloque 3: Enlaces Rápidos -->
-        <div class="footer-section">
-            <h3>🔗 Enlaces</h3>
-            <ul>
-                <li><a href="#">Términos y Condiciones</a></li>
-                <li><a href="#">Política de Privacidad</a></li>
-            </ul>
-        </div>
+        <footer class="site-footer">
+    <div class="footer-links">
+        <a href="#ubicacion">UBICACIÓN</a>
+        <a href="#contacto">INFORMACIÓN DE CONTACTO</a>
+        <a href="#opiniones">OPINIONES</a>
+        <a href="#eventos">EVENTOS</a>
     </div>
-
-    <!-- Barra inferior de derechos reservados -->
-    <div class="footer-bottom">
+    <div class="footer-copy">
         <p>&copy; 2026 Stock & Fresh. Todos los derechos reservados.</p>
     </div>
 </footer>
+        <script>
+            function cargarMain() {
+    // Opción A: Recarga la página principal del proyecto
+    window.location.href = "index.html";
+   
+}
+        
+        function cargarLogin() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('InicioSesion.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+    function cargarRegistro(){
+    fetch('Registro.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+    
+    function SegRegistro() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('DatosRegistro.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+</script>
     </body>
 </html>

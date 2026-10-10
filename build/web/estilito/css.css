@@ -215,6 +215,15 @@ body {
 .main-buttons {
     display: flex;
     gap: 20px;
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 25px; /* Hace los botones completamente ovalados */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: transform 0.2s, background-color 0.2s;
+    text-align: center;
+    
 }
 
 /* Estilos base de los botones rosas redondos */
@@ -233,6 +242,13 @@ body {
 .btn-registrar, .btn-iniciar {
     background-color: #d14d72; /* Tono rosa mexicano / magenta de tu interfaz */
     color: white;
+  padding: 10px 20px;        /* Espacio interno (arriba/abajo y lados) */
+  font-size: 16px;           /* Tamaño del texto */
+  font-family: sans-serif;   /* Tipo de fuente */
+  border: none;              /* Eliminar el borde predeterminado */
+  border-radius: 8px;        /* Redondear las esquinas */
+  cursor: pointer;           /* Cambiar el cursor a una mano al pasar por encima */
+  transition: background-color 0.3s ease; /* Suavizar los efectos */
 }
 
 /* Efectos visuales interactivos */
@@ -286,83 +302,178 @@ body {
     }
 }
 
-
-footer {
-    width: 100%;
-    background-color: #a3d97f; /* Verde claro (mismo tono que la barra del menú) */
-    color: #333333;            /* Texto oscuro para excelente legibilidad */
-    padding: 20px 40px;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: auto;  
-    height: 200px;/* Empuja el footer al fondo si usas un contenedor flex en el body */
-}
-
-/* Contenedor interno para organizar los bloques de información */
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+.site-footer {
+    background-color: #a8d57d; /* El tono verde que estás usando */
+    padding: 25px 20px;
     display: flex;
-    justify-content: space-between; /* Separa los bloques a los extremos */
-    align-items: flex-start;       /* Alinea los bloques desde arriba */
-    flex-wrap: wrap;               /* Permite que se acomode en pantallas chicas */
-    gap: 30px;
-}
-
-/* Estilo para cada bloque o columna de información */
-.footer-section {
-    flex: 1;
-    min-width: 250px;
-}
-
-.footer-section h3 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    color: #ffffff;                /* Títulos en blanco para que resalten */
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;     /* Texto en mayúsculas */
-    letter-spacing: 0.5px;
-}
-
-.footer-section p, 
-.footer-section ul {
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.footer-section ul {
-    list-style: none;              /* Quita los puntos de las listas */
-}
-
-.footer-section ul li {
-    margin-bottom: 8px;
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 8px;                      /* Espacio para iconos pequeños si los usas */
+    gap: 20px; /* Separa los enlaces del texto de abajo */
 }
 
-/* Enlaces dentro del footer */
-.footer-section a {
-    color: #333333;
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px; /* Espacio horizontal bien separado entre cada enlace */
+    width: 100%;
+}
+
+.footer-links a {
+    color: #2c4c1e; /* Color oscuro para que contraste bien con el verde */
     text-decoration: none;
-    transition: color 0.2s ease;
+    font-weight: bold;
+    font-size: 14px;
 }
 
-.footer-section a:hover {
-    color: #ffffff;                /* Cambia a blanco al pasar el cursor */
+.footer-links a:hover {
+    text-decoration: underline;
 }
 
-/* --------------------------------------------------------------------------
-   BARRA DE CRÉDITOS (PARTE INFERIOR DEL FOOTER)
-   -------------------------------------------------------------------------- */
-.footer-bottom {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Línea divisoria sutil */
-    text-align: center;
+.footer-copy {
+    color: #2c4c1e;
     font-size: 13px;
-    color: #555555;
+    text-align: center;
+}
+
+/* Contenedor del formulario */
+.main-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Etiquetas de los campos */
+.main-form-container label {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Campos de texto (Inputs) */
+.main-form-container input[type="text"],
+.main-form-container input[type="password"],
+.main-form-container input[type="number"]{
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #f4c45e; /* Tono amarillo cálido similar a tu barra de navegación */
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #333333;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto al hacer clic en los inputs */
+.main-form-container input[type="text"]:focus,
+.main-form-container input[type="password"]:focus,
+.main-form-container input[type="number"]:focus{
+    border-color: #78c257; /* Tono verde principal de Stock & Fresh */
+    box-shadow: 0 0 5px rgba(120, 194, 87, 0.3);
+}
+
+/* Botón de Iniciar Sesión */
+.btn-enviar-sesion {
+    background-color: #d9534f; /* O el color rojo/coral que usa tu botón de diseño actual */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-enviar-sesion:hover {
+    background-color: #c9302c;
+}
+
+/* Contenedor principal centrado */
+.main-vertical-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.main-content-top {
+    margin-bottom: 30px;
+}
+
+.main-content-top h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #111111;
+    margin-bottom: 12px;
+}
+
+.main-content-top p {
+    font-size: 15px;
+    color: #333333;
+    line-height: 1.5;
+}
+
+/* Contenedor del formulario */
+.main-form-container-bottom {
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Agrupación de cada input con su etiqueta */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #111111;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Estilo de los campos de texto */
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d9534f; /* Borde rojizo/coral elegante como en la referencia */
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #333333;
+    outline: none;
+}
+
+/* Botón de Registro centrado */
+.btn-enviar-sesion {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    margin: 30px auto 0 auto;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar-sesion:hover {
+    background-color: #c9302c;
 }

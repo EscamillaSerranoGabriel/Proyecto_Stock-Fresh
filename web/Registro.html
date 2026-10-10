@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="estilito/css.css"/>
+            <div class="main-content">
+                <h1>¡Inicia sesión en <br><span>Stock & Fresh y toma el control de tu </span><span> negocio!</span></h1>
+        
+        <p>Administra tu inventario en tiempo real, registra
+        las ventas de tu jornada laboral y lleva un control detallado de tu negocio.</p>
+        <p><strong>Ingresa tus datos como Locatario</strong></p>
+        
+        
+            </div>
+
+<div class="main-form-container">
+    <form action="ServletLogin" method="POST">
+        <label for="nombreLocatario">Nombre de Locatario</label>
+        <input type="text" id="nombreLocatario" name="nombreLocatario" placeholder="Ej: St0ck_Fr3sh" required>
+        <br>
+
+        <label for="correoLoc">Correo Electrónico</label>
+        <input type="text" id="correoLoc" name="correoLoc" placeholder="Ej: 123@stockFresh" required>
+        <br>
+        
+        <label for="numLoc">Número Telefónico</label>
+        <input type="number" id="numLoc" name="numLoc" placeholder="Ej: 5589636574" required>
+        <br><br>
+
+        <button type="button" class="btn-enviar-sesion" onclick="SegRegistro()">Registrarse</button>
+    </form>
+</div>
+
