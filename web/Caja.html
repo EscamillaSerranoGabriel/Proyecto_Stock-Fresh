@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilito/CajaEstilo.css"/>
+    </head>
+    <body style="background-color: #FFFBEB">
+        <header>
+            <div class="header-top">
+        <div class="logo-container">
+            <img src="logo_fondo_gris.png" alt="Stock & Fresh" width="70" height="70">
+            <span>Stock & Fresh</span>
+        </div>
+        <div class="search-bar">
+            <input type="text" class="search-bar" placeholder="Buscar...">
+        </div>
+                <div class="logo-usuario">
+                    <img src="icono_usuario_circulo.png" alt="Stock & Fresh" width="70" height="70" onclick="verPerfil()">
+        </div>
+       
+                <button class="iniciosesion" onclick="cargarMain()">HOME</button>
+       
+                <span class="cart">$ 0.00</span>
+    </div>
+
+    <!-- FILA 2: Menú de navegación principal (Verde claro con botones naranjas) -->
+    <nav class="header-nav">
+        <ul>
+            <li><a href="Ventas.html">Registro de Ventas</a></li>
+            <li><a href="Caja.html">Caja</a></li>
+            <li><a href="#">Gestión de Inventario</a></li>
+            <li><a href="#">Historial</a></li>
+            <li><a href="#">Reportes y Gráficas</a></li>
+        </ul>
+    </nav>
+        </header>
+        <main class="principal" >
+            <div class="caja-wrapper">
+    <h2 class="section-title">Caja</h2>
+    
+    <div class="caja-main-container">
+        
+        <!-- Tarjeta Apertura -->
+        <div class="caja-card">
+            <button class="caja-btn-top btn-apertura" onclick="AperturaCaja()">Apertura</button>
+            <div class="caja-icon-container">
+                <span class="status-badge check">✓</span>
+                <!-- Icono de Caja Registradora -->
+                <svg class="caja-svg" viewBox="0 0 24 24" width="90" height="90" fill="none" stroke="#d9534f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 18h16a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1z"></path>
+                    <path d="M6 10V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"></path>
+                    <path d="M15 7h2"></path>
+                    <path d="M15 9h2"></path>
+                    <path d="M6 14h2"></path>
+                    <path d="M10 14h2"></path>
+                    <path d="M14 14h4"></path>
+                    <path d="M8 18v3"></path>
+                    <path d="M16 18v3"></path>
+                    <path d="M6 3l2 4"></path>
+                    <circle cx="12" cy="18" r="1"></circle>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Tarjeta Cierre -->
+        <div class="caja-card">
+            <button class="caja-btn-top btn-cierre" onclick="CierreCaja()">Cierre</button>
+            <div class="caja-icon-container">
+                <span class="status-badge cross">✕</span>
+                <!-- Icono de Caja Registradora -->
+                <svg class="caja-svg" viewBox="0 0 24 24" width="90" height="90" fill="none" stroke="#d9534f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 18h16a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1z"></path>
+                    <path d="M6 10V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"></path>
+                    <path d="M15 7h2"></path>
+                    <path d="M15 9h2"></path>
+                    <path d="M6 14h2"></path>
+                    <path d="M10 14h2"></path>
+                    <path d="M14 14h4"></path>
+                    <path d="M8 18v3"></path>
+                    <path d="M16 18v3"></path>
+                    <path d="M6 3l2 4"></path>
+                    <circle cx="12" cy="18" r="1"></circle>
+                </svg>
+            </div>
+        </div>
+
+    </div>
+</div>
+        </main>
+        <footer class="site-footer">
+    <div class="footer-links">
+        <a href="#ubicacion">UBICACIÓN</a>
+        <a href="#contacto">INFORMACIÓN DE CONTACTO</a>
+        <a href="#opiniones">OPINIONES</a>
+        <a href="#eventos">EVENTOS</a>
+    </div>
+    <div class="footer-copy">
+        <p>&copy; 2026 Stock & Fresh. Todos los derechos reservados.</p>
+    </div>
+</footer>
+        <script>
+            function verPerfil() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('PerfilsinLocal.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+        
+        function cargarMain() {
+    // Opción A: Recarga la página principal del proyecto
+    window.location.href = "index.html";
+   
+}
+
+        function AperturaCaja() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('AperturaCaja.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+        function CierreCaja() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('CierreCaja.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+        </script>

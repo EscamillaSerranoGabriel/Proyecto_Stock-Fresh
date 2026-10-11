@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilito/VentasEstilo.css"/>
+    </head>
+    <body style="background-color: #FFFBEB">
+        <header>
+            <div class="header-top">
+        <div class="logo-container">
+            <img src="logo_fondo_gris.png" alt="Stock & Fresh" width="70" height="70">
+            <span>Stock & Fresh</span>
+        </div>
+        <div class="search-bar">
+            <input type="text" class="search-bar" placeholder="Buscar...">
+        </div>
+                <div class="logo-usuario">
+                    <img src="icono_usuario_circulo.png" alt="Stock & Fresh" width="70" height="70" onclick="verPerfil()">
+        </div>
+       
+                <button class="iniciosesion" onclick="cargarMain()">HOME</button>
+       
+                <span class="cart">$ 0.00</span>
+    </div>
+
+    <!-- FILA 2: Menú de navegación principal (Verde claro con botones naranjas) -->
+    <nav class="header-nav">
+        <ul>
+            <li><a href="Ventas.html">Registro de Ventas</a></li>
+            <li><a href="Caja.html">Caja</a></li>
+            <li><a href="#">Gestión de Inventario</a></li>
+            <li><a href="#">Historial</a></li>
+            <li><a href="#">Reportes y Gráficas</a></li>
+        </ul>
+    </nav>
+        </header>
+        <main class="principal" >
+            <div class="ventas-wrapper">
+    <h2 class="section-title">Registro de Ventas</h2>
+    
+    <div class="cards-container">
+        
+        <!-- Tarjeta 1: Registrar Venta -->
+        <div class="venta-card">
+            <button class="btn-pill btn-green" onclick="RegistroVenta()">Registrar Venta</button>
+            <div class="icon-container">
+                <svg viewBox="0 0 24 24" width="75" height="75" fill="none" stroke="#b84a4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="8" y1="13" x2="16" y2="13"></line>
+                    <line x1="8" y1="17" x2="16" y2="17"></line>
+                    <line x1="10" y1="9" x2="10" y2="9.01"></line>
+                    <path d="M10 10.5c.83 0 1.5-.67 1.5-1.5S10.83 7.5 10 7.5s-1.5.67-1.5 1.5.67 1.5 1.5 1.5z"></path>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2: Modificar Venta -->
+        <div class="venta-card">
+            <button class="btn-pill btn-yellow" onclick="VeraModificar()">Modificar Venta</button>
+            <div class="icon-container">
+                <svg viewBox="0 0 24 24" width="75" height="75" fill="none" stroke="#b84a4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <path d="M10.42 12.61a2.1 2.1 0 1 1 2.97 2.97L7.95 21l-3.5.7 .7-3.5 5.27-5.59z"></path>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3: Ventas -->
+        <div class="venta-card">
+            <button class="btn-pill btn-green" onclick="VerVentas()">Ventas</button>
+            <div class="icon-container">
+                <svg viewBox="0 0 24 24" width="75" height="75" fill="none" stroke="#b84a4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    <circle cx="12" cy="14" r="2"></circle>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Tarjeta 4: Eliminar Venta -->
+        <div class="venta-card">
+            <button class="btn-pill btn-yellow" onclick="EliminarVenta()">Eliminar Venta</button>
+            <div class="icon-container">
+                <svg viewBox="0 0 24 24" width="75" height="75" fill="none" stroke="#b84a4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="3 6 5 6 21 6"></polyline>
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                </svg>
+            </div>
+        </div>
+
+    </div>
+</div>
+        </main>
+        <footer class="site-footer">
+    <div class="footer-links">
+        <a href="#ubicacion">UBICACIÓN</a>
+        <a href="#contacto">INFORMACIÓN DE CONTACTO</a>
+        <a href="#opiniones">OPINIONES</a>
+        <a href="#eventos">EVENTOS</a>
+    </div>
+    <div class="footer-copy">
+        <p>&copy; 2026 Stock & Fresh. Todos los derechos reservados.</p>
+    </div>
+</footer>
+        
+        <script>
+            
+            function verPerfil() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('PerfilsinLocal.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+            
+            function cargarMain() {
+    // Opción A: Recarga la página principal del proyecto
+    window.location.href = "index.html";
+   
+}
+    function RegistroVenta() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('RegistrarVenta.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+    function EliminarVenta() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('EliminarVentas.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+        function VerVentas() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('VerVentas.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+        function VeraModificar() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('VerVaModificar.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+        function HacerCambios() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('ModificarVenta.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function cambiarCantidad(producto, cambio) {
+        // Obtenemos el input correspondiente al producto usando su ID único
+        const input = document.getElementById('cnt-' + producto);
+        
+        // Convertimos el valor actual a número (si está vacío, toma 0)
+        let valorActual = parseInt(input.value) || 0;
+        
+        // Calculamos el nuevo valor sumando o restando
+        let nuevoValor = valorActual + cambio;
+        
+        // Evitamos que baje de 0
+        if (nuevoValor < 0) {
+            nuevoValor = 0;
+        }
+        
+        // Asignamos el nuevo valor al input
+        input.value = nuevoValor;
+    }
+        </script>

@@ -1,0 +1,171 @@
+<link rel="stylesheet" href="estilito/VentasEstilo.css"/>
+<div class="registrar-venta-wrapper">
+    <h2 class="section-title">Registrar Venta</h2>
+    
+    <div class="ventas-main-container">
+        
+        <!-- Tarjeta Izquierda: Productos y Buscador -->
+        <div class="productos-card">
+            <div class="productos-header">
+                <span class="productos-label">Productos</span>
+                <div class="search-box">
+                    <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#b84a4a" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" placeholder="Buscar..." class="search-input">
+                </div>
+            </div>
+
+            <div class="productos-grid-container">
+                <!-- Grid de productos -->
+                <div class="productos-grid">
+                    
+                    <!-- Producto 1: Jitomate -->
+                    <div class="prod-item-card">
+                        <div class="prod-info">
+                            <span class="prod-name">Jitomate</span>
+                            <span class="prod-price">$0.00</span>
+                        </div>
+                        <div class="prod-img">🍅</div>
+                        <div class="counter-box">
+                            <button class="cnt-btn" onclick="cambiarCantidad('jitomate', -1)">−</button>
+                            <input type="text" id="cnt-jitomate" class="cnt-input" value="0" readonly>
+                            <button class="cnt-btn" onclick="cambiarCantidad('jitomate', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Producto 2: Pera -->
+                    <div class="prod-item-card">
+                        <div class="prod-info">
+                            <span class="prod-name">Pera</span>
+                            <span class="prod-price">$0.00</span>
+                        </div>
+                        <div class="prod-img">🍐</div>
+                        <div class="counter-box">
+                            <button class="cnt-btn" onclick="cambiarCantidad('pera', -1)">−</button>
+                            <input type="text" id="cnt-pera" class="cnt-input" value="0" readonly>
+                            <button class="cnt-btn" onclick="cambiarCantidad('pera', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Producto 3: Zanahoria -->
+                    <div class="prod-item-card">
+                        <div class="prod-info">
+                            <span class="prod-name">Zanahoria</span>
+                            <span class="prod-price">$0.00</span>
+                        </div>
+                        <div class="prod-img">🥕</div>
+                        <div class="counter-box">
+                            <button class="cnt-btn" onclick="cambiarCantidad('zanahoria', -1)">−</button>
+                            <input type="text" id="cnt-zanahoria" class="cnt-input" value="0" readonly>
+                            <button class="cnt-btn" onclick="cambiarCantidad('zanahoria', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Producto 4: Brocoli -->
+                    <div class="prod-item-card">
+                        <div class="prod-info">
+                            <span class="prod-name">Brocoli</span>
+                            <span class="prod-price">$0.00</span>
+                        </div>
+                        <div class="prod-img">🥦</div>
+                        <div class="counter-box">
+                            <button class="cnt-btn" onclick="cambiarCantidad('brocoli', -1)">−</button>
+                            <input type="text" id="cnt-brocoli" class="cnt-input" value="0" readonly>
+                            <button class="cnt-btn" onclick="cambiarCantidad('brocoli', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Producto 5: Platano -->
+                    <div class="prod-item-card">
+                        <div class="prod-info">
+                            <span class="prod-name">Platano</span>
+                            <span class="prod-price">$0.00</span>
+                        </div>
+                        <div class="prod-img">🍌</div>
+                        <div class="counter-box">
+                            <button class="cnt-btn" onclick="cambiarCantidad('platano', -1)">−</button>
+                            <input type="text" id="cnt-platano" class="cnt-input" value="0" readonly>
+                            <button class="cnt-btn" onclick="cambiarCantidad('platano', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Producto 6: Aguacate -->
+                    <div class="prod-item-card">
+                        <div class="prod-info">
+                            <span class="prod-name">Aguacate</span>
+                            <span class="prod-price">$0.00</span>
+                        </div>
+                        <div class="prod-img">🥑</div>
+                        <div class="counter-box">
+                            <button class="cnt-btn" onclick="cambiarCantidad('aguacate', -1)">−</button>
+                            <input type="text" id="cnt-aguacate" class="cnt-input" value="0" readonly>
+                            <button class="cnt-btn" onclick="cambiarCantidad('aguacate', 1)">+</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta Derecha: Totales y Método de Pago -->
+        <div class="checkout-card">
+            <div class="checkout-left-col">
+                <div class="form-group">
+                    <label>Subtotal</label>
+                    <input type="text" class="form-control" value="$ 0.00">
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="impuestos">
+                    <label for="impuestos">Impuestos</label>
+                </div>
+
+                <div class="form-group">
+                    <label>Total</label>
+                    <input type="text" class="form-control" value="$ 0.00">
+                </div>
+
+                <div class="form-group">
+                    <label>Dinero recibido</label>
+                    <input type="text" class="form-control" value="$ 0.00">
+                </div>
+
+                <div class="form-group">
+                    <label>Cambio</label>
+                    <input type="text" class="form-control" value="$ 0.00">
+                </div>
+            </div>
+
+            <div class="checkout-divider"></div>
+
+            <div class="checkout-right-col">
+                <div class="payment-methods">
+                    <span class="payment-title">Método de Pago</span>
+                    <label class="radio-label"><input type="radio" name="pago"> Efectivo</label>
+                    <label class="radio-label"><input type="radio" name="pago"> Tarjeta</label>
+                    <label class="radio-label"><input type="radio" name="pago"> Transferencia</label>
+                </div>
+
+                <div class="form-group">
+                    <label>Cliente</label>
+                    <input type="text" class="form-control" placeholder="Ej. 5567890956">
+                </div>
+
+                <div class="form-group">
+                    <label>No. de Venta</label>
+                    <input type="text" class="form-control" value="000000000">
+                </div>
+
+                <div class="form-group">
+                    <label>Caja/Turno</label>
+                    <select class="form-control select-control">
+                        <option>Seleccione una opción</option>
+                        <option>Caja 1</option>
+                    </select>
+                </div>
+
+                <button class="btn-realizar-cambio">Guardar cambios</button>
+            </div>
+        </div>
+
+    </div>
+</div>

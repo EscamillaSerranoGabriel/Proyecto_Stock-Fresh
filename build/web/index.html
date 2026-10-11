@@ -17,7 +17,7 @@
             <input type="text" class="search-bar" placeholder="Buscar...">
         </div>
                 <div class="logo-usuario">
-            <img src="icono_usuario_circulo.png" alt="Stock & Fresh" width="70" height="70">
+                    <img src="icono_usuario_circulo.png" alt="Stock & Fresh" width="70" height="70" onclick="verPerfil()">
         </div>
        
                 <button class="iniciosesion" onclick="cargarMain()">HOME</button>
@@ -28,8 +28,8 @@
     <!-- FILA 2: Menú de navegación principal (Verde claro con botones naranjas) -->
     <nav class="header-nav">
         <ul>
-            <li><a href="#">Registro de Ventas</a></li>
-            <li><a href="#">Caja</a></li>
+            <li><a href="Ventas.html">Registro de Ventas</a></li>
+            <li><a href="Caja.html">Caja</a></li>
             <li><a href="#">Gestión de Inventario</a></li>
             <li><a href="#">Historial</a></li>
             <li><a href="#">Reportes y Gráficas</a></li>
@@ -113,6 +113,60 @@
     function SegRegistro() {
     // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
     fetch('DatosRegistro.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function verPerfil() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('PerfilsinLocal.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function AgregarLocal() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('AgregarLocal.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function PerfilListo() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('Perfil.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error('No se pudo cargar la vista de login');

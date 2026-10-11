@@ -1,0 +1,581 @@
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Apila la barra oscura sobre la barra clara */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   FILA 1: Barra superior (Logo, buscador y usuario)
+   -------------------------------------------------------------------------- */
+.header-top {
+    background-color: #7CCF35; /* Verde principal oscuro */
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between; /* Distribuye los 3 bloques a los extremos */
+    align-items: center; /* Alinea todo verticalmente al centro */
+}
+
+/* Bloque del Logotipo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.search-bar{
+    width: 50%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados estilo cápsula */
+    background-color: #f6fad3; /* Color amarillento suave de fondo */
+    font-size: 14px;
+    outline: none;
+    
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%; /* Hace el fondo del logo circular */
+}
+
+/* Bloque del Buscador Central */
+.search-container {
+    width: 40%; /* Controla el ancho de la barra de búsqueda */
+}
+
+.logo-usuario{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados estilo cápsula */
+    background-color: #f6fad3; /* Color amarillento suave de fondo */
+    font-size: 14px;
+    outline: none;
+}
+
+.cart{
+     width: 5%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados estilo cápsula */
+    background-color: #f6fad3; /* Color amarillento suave de fondo */
+    font-size: 14px;
+    outline: none
+}
+
+.iniciosesion{
+    background-color: #497D15; /* Color de fondo */
+  color: white;            /* Color del texto */
+  padding: 10px 20px;        /* Espacio interno (arriba/abajo y lados) */
+  font-size: 16px;           /* Tamaño del texto */
+  font-family: sans-serif;   /* Tipo de fuente */
+  border: none;              /* Eliminar el borde predeterminado */
+  border-radius: 8px;        /* Redondear las esquinas */
+  cursor: pointer;           /* Cambiar el cursor a una mano al pasar por encima */
+  transition: background-color 0.3s ease; /* Suavizar los efectos */
+}
+
+/* Bloque de Acciones de Usuario (Derecha) */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.btn-login {
+    background-color: #6da64b; /* Verde más encendido para el botón */
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cart-status {
+    background-color: white;
+    padding: 6px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* --------------------------------------------------------------------------
+   FILA 2: Barra inferior (Menú de navegación naranja)
+   -------------------------------------------------------------------------- */
+.header-nav {
+    background-color: #FDC745; /* Verde más claro de fondo */
+    padding: 12px 20px;
+}
+
+.header-nav ul {
+    list-style: none; /* Quita las viñetas o puntos */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los botones */
+    gap: 15px; /* Espacio exacto de separación entre botones */
+}
+
+.header-nav a {
+    display: inline-block;
+    background-color: #e09f3e; /* Color naranja de los botones */
+    color: white;
+    text-decoration: none; /* Quita el subrayado del enlace */
+    padding: 8px 20px;
+    border-radius: 20px; /* Transforma los rectángulos en óvalos */
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+/* Efecto visual al pasar el cursor */
+.header-nav a:hover {
+    background-color: #c9872b; /* Naranja ligeramente más oscuro */
+}
+
+body {
+  margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fcf9e8; /* Tu fondo beige claro */
+    
+    /* ESTO ES LO CLAVE: Fuerza al cuerpo a medir el 100% de la pantalla */
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; /* 100% del alto de la ventana del navegador */
+}
+
+.principal{
+  max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    
+}
+
+.site-footer {
+    background-color: #a8d57d; /* El tono verde que estás usando */
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Separa los enlaces del texto de abajo */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px; /* Espacio horizontal bien separado entre cada enlace */
+    width: 100%;
+}
+
+.footer-links a {
+    color: #2c4c1e; /* Color oscuro para que contraste bien con el verde */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    color: #2c4c1e;
+    font-size: 13px;
+    text-align: center;
+}
+
+/*estilo main*/
+.caja-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #b84a4a;
+    font-size: 32px;
+    margin-bottom: 35px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.caja-main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.caja-card {
+    background: #ffffff;
+    border: 2px solid #ebdcb8;
+    border-radius: 24px;
+    padding: 30px 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.caja-btn-top {
+    width: 80%;
+    padding: 12px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    text-align: center;
+    transition: opacity 0.2s;
+}
+
+.caja-btn-top:hover {
+    opacity: 0.9;
+}
+
+.btn-apertura {
+    background-color: #b7e4a4; /* Tono verde claro tipo pastilla */
+    color: #222;
+}
+
+.btn-cierre {
+    background-color: #f3c153; /* Tono amarillo/naranja pastilla */
+    color: #222;
+}
+
+.caja-icon-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.status-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+    background: #ffffff;
+    border: 2px solid #d9534f;
+    color: #d9534f;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.caja-svg {
+    display: block;
+}
+
+/*Diseño AperturaCaja.html*/
+.apertura-caja-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #b84a4a;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.apertura-card {
+    background: #ffffff;
+    border: 2px solid #ebdcb8;
+    border-radius: 20px;
+    padding: 35px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 850px;
+    display: flex;
+    gap: 35px;
+}
+
+.apertura-col-left,
+.apertura-col-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.apertura-divider {
+    width: 2px;
+    background-image: linear-gradient(to bottom, #e8a5a5 50%, transparent 50%);
+    background-size: 2px 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #222;
+}
+
+.form-control {
+    padding: 10px 14px;
+    border: 1px solid #e8a5a5;
+    border-radius: 8px;
+    outline: none;
+    font-size: 13px;
+    background-color: #fffcfc;
+    width: 100%;
+    box-sizing: border-box;
+    color: #444;
+}
+
+.form-control:focus {
+    border-color: #b84a4a;
+}
+
+.input-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon-wrapper .form-control {
+    padding-right: 40px;
+}
+
+.input-icon {
+    position: absolute;
+    right: 12px;
+    pointer-events: none;
+}
+
+.select-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 24 24' width='16' height='16' fill='%23b84a4a' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    color: #888;
+}
+
+.btn-aperturar {
+    background-color: #d9534f;
+    color: white;
+    padding: 11px;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 10px;
+    transition: opacity 0.2s;
+}
+
+.btn-aperturar:hover {
+    opacity: 0.9;
+}
+
+/*Diseño CierreCaja.html*/
+.cierre-caja-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #b84a4a;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.cierre-card {
+    background: #ffffff;
+    border: 2px solid #ebdcb8;
+    border-radius: 20px;
+    padding: 35px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    gap: 40px;
+}
+
+.cierre-col-left,
+.cierre-col-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: center;
+}
+
+.cierre-col-right {
+    gap: 22px;
+}
+
+.cierre-divider-vertical {
+    width: 2px;
+    background-image: linear-gradient(to bottom, #e8a5a5 50%, transparent 50%);
+    background-size: 2px 10px;
+}
+
+.cierre-divider-horizontal {
+    height: 1px;
+    background-color: #e8a5a5;
+    margin: 5px 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #222;
+}
+
+.sub-label {
+    font-size: 12px !important;
+    color: #333 !important;
+}
+
+.form-control {
+    padding: 9px 12px;
+    border: 1px solid #e8a5a5;
+    border-radius: 8px;
+    outline: none;
+    font-size: 13px;
+    background-color: #fffcfc;
+    width: 100%;
+    box-sizing: border-box;
+    color: #444;
+}
+
+.form-control:focus {
+    border-color: #b84a4a;
+}
+
+.cierre-row-selects {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group.half {
+    flex: 1;
+}
+
+.select-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 24 24' width='16' height='16' fill='%23b84a4a' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.pagos-seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pagos-titulo {
+    font-size: 13px;
+    font-weight: bold;
+    color: #222;
+}
+
+.pagos-inputs-grid {
+    display: flex;
+    gap: 12px;
+}
+
+.pagos-inputs-grid .form-group {
+    flex: 1;
+}
+
+.btn-cierre-accion {
+    background-color: #d9534f;
+    color: white;
+    padding: 11px;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 5px;
+    transition: opacity 0.2s;
+}
+
+.btn-cierre-accion:hover {
+    opacity: 0.9;
+}
