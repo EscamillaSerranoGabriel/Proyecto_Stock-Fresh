@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>Gestión de Inventario - Stock & Fresh</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Asegúrate de apuntar a tu archivo CSS principal donde pusimos los estilos de las tarjetas -->
+        <link rel="stylesheet" href="estilito/reportesyg.css"/> 
+    </head>
+    <body style="background-color: #FFFBEB; margin: 0; padding: 0;">
+        
+        <!-- ================= ENCABEZADO Y MENÚ ================= -->
+        <header>
+            <div class="header-top">
+                <div class="logo-container">
+                    <img src="logo_fondo_gris.png" alt="Stock & Fresh" width="70" height="70">
+                    <span>Stock & Fresh</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" class="search-bar" placeholder="Buscar...">
+                </div>
+                <div class="logo-usuario">
+                    <img src="icono_usuario_circulo.png" alt="Usuario" width="70" height="70" onclick="verPerfil()">
+                </div>
+                <button class="iniciosesion" onclick="cargarMain()">HOME</button>
+                <span class="cart">$ 0.00</span>
+            </div>
+
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="Ventas.html">Registro de Ventas</a></li>
+                    <li><a href="Caja.html">Caja</a></li>
+                    <li><a href="gestioninventario.html">Gestión de Inventario</a></li>
+                    <li><a href="historial.html">Historial</a></li>
+                    <li><a href="reportesyg.html">Reportes y Gráficas</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+       <div class="contenedor-inventario">
+    
+    <!-- Este es el título corregido para que se vea rosa y centrado -->
+    <h2 class="titulo-inventario">Reportes y Gráficas</h2>
+    
+    <div class="contenedor-reportes">
+        
+        <!-- === TARJETA IZQUIERDA (Gráfica) === -->
+        <div class="tarjeta-reporte">
+            <div class="header-grafica">
+                <span class="label-grafica">Grafica del...</span>
+                <select class="select-opcion">
+                    <option>Selecciona una opción</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                </select>
+            </div>
+            
+            <div class="imagen-grafica">
+                
+                <img src="ejgraf.png" alt="Gráfica de rendimiento" style="width: 100%; height: auto;">
+            </div>
+        </div>
+
+        <!-- === TARJETA DERECHA (Información) === -->
+        <div class="tarjeta-reporte">
+            <h3 class="titulo-info">Información del ---</h3>
+            
+            <div class="lista-totales">
+                <div class="item-total">
+                    <div class="icono-fondo">
+                        
+                        <img src="totaldeventas.png" alt="Ventas" width=50">
+                    </div>
+                    <span class="texto-total">Total de ventas</span>
+                </div>
+
+                <div class="item-total">
+                    <div class="icono-fondo">
+                        
+                        <img src="totaldetransacciones.png" alt="Transacciones" width="50">
+                    </div>
+                    <span class="texto-total">Total de Transacciones</span>
+                </div>
+
+                <div class="item-total">
+                    <div class="icono-fondo">
+                        
+                        <img src="totaldeproductos.png" alt="Productos" width="50">
+                    </div>
+                    <span class="texto-total">Total de Productos</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+        
+           <footer class="site-footer">
+    <div class="footer-links">
+        <a href="#ubicacion">UBICACIÓN</a>
+        <a href="#contacto">INFORMACIÓN DE CONTACTO</a>
+        <a href="#opiniones">OPINIONES</a>
+        <a href="#eventos">EVENTOS</a>
+    </div>
+    <div class="footer-copy">
+        <p>&copy; 2026 Stock & Fresh. Todos los derechos reservados.</p>
+    </div>
+</footer>

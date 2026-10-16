@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alertas - Stock & Fresh</title>
+        <!-- Esta línea es vital para que los emojis se vean bien y no rotos -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Apunta a tu archivo de estilos principal -->
+        <link rel="stylesheet" href="estilito/gestion.css"/> 
+    </head>
+    <body>
+        
+        <!-- ================= ENCABEZADO Y MENÚ ================= -->
+        <header>
+            <div class="header-top">
+                <div class="logo-container">
+                    <img src="logo_fondo_gris.png" alt="Stock & Fresh" class="logo-img">
+                    <span>Stock & Fresh</span>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Buscar...">
+                </div>
+                <div class="user-actions">
+                    <img src="icono_usuario_circulo.png" alt="Usuario" class="avatar" onclick="verPerfil()">
+                    <button class="iniciosesion">Iniciar Sesión</button>
+                    <span class="cart-status">$ 0.00</span>
+                </div>
+            </div>
+
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="Ventas.html">Registro de Ventas</a></li>
+                    <li><a href="Caja.html">Caja</a></li>
+                    <li><a href="gestioninventario.html">Gestión de Inventario</a></li>
+                    <li><a href="historial.html">Historial</a></li>
+                    <li><a href="reportesyg.html">Reportes y Gráficas</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ================= CONTENIDO CENTRAL ================= -->
+        <main class="principal">
+            <div class="contenedor-inventario">
+                <h2 class="titulo-inventario">Alertas</h2>
+                
+                <!-- Tarjeta principal con borde amarillo -->
+                <div class="tarjeta-alertas-producto">
+                    <h3 class="titulo-lista-prod">Notificaciones</h3>
+                    
+                    <!-- Contenedor con barra de desplazamiento (scroll) -->
+                    <div class="lista-productos-alertas">
+                        
+                        <!-- Elemento de la lista 1: Manzana -->
+                        <div class="item-producto-alertas">
+                            <div class="icono-prod-alertas">🍎</div>
+                            <div class="texto-alerta">
+                                <span>Ya no queda tanto stock de Manzanas!</span>
+                            </div>
+                            <div class="fecha-alerta">
+                                <span>00 / 00 / 0000</span>
+                                <span>00:00</span>
+                            </div>
+                        </div>
+
+                        <!-- Elemento de la lista 2: Leche -->
+                        <div class="item-producto-alertas">
+                            <div class="icono-prod-alertas bg-celeste">🥛</div>
+                            <div class="texto-alerta">
+                                <span>Ya no queda más stock de Leche!</span>
+                            </div>
+                            <div class="fecha-alerta">
+                                <span>00 / 00 / 0000</span>
+                                <span>00:00</span>
+                            </div>
+                        </div>
+
+                        <!-- Elemento de la lista 3: Jabón -->
+                        <div class="item-producto-alertas">
+                            <div class="icono-prod-alertas bg-rosa">🧼</div>
+                            <div class="texto-alerta">
+                                <span>Tienes 0 stock de jabón corporal!</span>
+                            </div>
+                            <div class="fecha-alerta">
+                                <span>00 / 00 / 0000</span>
+                                <span>00:00</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Botón de Eliminar -->
+                    <div class="btn-alertas-container">
+                        <button class="btn-alertas-accion">Eliminar Notificaciones</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="site-footer">
+            <div class="footer-links">
+                <a href="#ubicacion">Ubicación</a>
+                <a href="#contacto">Información de Contacto</a>
+                <a href="#opiniones">Opiniones</a>
+                <a href="#eventos">Eventos</a>
+            </div>
+        </footer>
+    </body>
+</html>

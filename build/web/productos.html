@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gestión de Inventario - Productos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Tu archivo CSS principal -->
+        <link rel="stylesheet" href="estilito/gestion.css"/> 
+    </head>
+    <body>
+        
+        <!-- ================= ENCABEZADO Y MENÚ ================= -->
+        <header>
+            <div class="header-top">
+                <div class="logo-container">
+                    <img src="logo_fondo_gris.png" alt="Stock & Fresh" width="70" height="70">
+                    <span>Stock & Fresh</span>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" class="search-bar" placeholder="Buscar...">
+                </div>
+                
+                <div class="logo-usuario">
+                    <!-- Ver perfil sigue funcionando -->
+                    <img src="icono_usuario_circulo.png" alt="Usuario" width="70" height="70" onclick="verPerfil()">
+                </div>
+                
+                <!-- Botón HOME / Iniciar Sesión -->
+                <button class="iniciosesion" onclick="cargarMain()">Iniciar Sesión</button>
+                <span class="cart">$ 0.00</span>
+            </div>
+
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="Ventas.html">Registro de Ventas</a></li>
+                    <li><a href="Caja.html">Caja</a></li>
+                    <li><a href="gestioninventario.html">Gestión de Inventario</a></li>
+                    <li><a href="historial.html">Historial</a></li>
+                    <li><a href="reportesyg.html">Reportes y Gráficas</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ================= CONTENIDO CENTRAL ================= -->
+        <main class="principal">
+            <div class="contenedor-inventario">
+                
+                <h2 class="titulo-inventario">Productos</h2>
+                
+                <!-- Contenedor de Tarjetas -->
+                <div class="tarjetas-inventario">
+                    
+                    <!-- Tarjeta 1: Registrar Producto -->
+                    <div class="tarjeta-opcion" onclick="CargarRegistrarProducto()">
+                        <button class="btn-verde">Registrar<br>Producto</button>
+                        <img src="registrarproducto.png" alt="Registrar" class="img-tarjeta">
+                    </div>
+
+                    <!-- Tarjeta 2: Modificar Producto -->
+                    <div class="tarjeta-opcion" onclick="CargarModificarProducto()">
+                        <button class="btn-amarillo">Modificar<br>Producto</button>
+                        <img src="modificarproducto.png" alt="Modificar" class="img-tarjeta">
+                    </div>
+
+                    <!-- Tarjeta 3: Productos -->
+                    <div class="tarjeta-opcion" onclick="CargarVerProductos()">
+                        <button class="btn-verde">Productos</button>
+                        <img src="productos.png" alt="Productos" class="img-tarjeta">
+                    </div>
+
+                    <!-- Tarjeta 4: Eliminar Producto -->
+                    <div class="tarjeta-opcion" onclick="CargarEliminarProducto()">
+                        <button class="btn-amarillo">Eliminar<br>Producto</button>
+                        <img src="eliminarproductos.png" alt="Eliminar" class="img-tarjeta">
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="site-footer">
+            <div class="footer-links">
+                <a href="#ubicacion">UBICACIÓN</a>
+                <a href="#contacto">INFORMACIÓN DE CONTACTO</a>
+                <a href="#opiniones">OPINIONES</a>
+                <a href="#eventos">EVENTOS</a>
+            </div>
+        </footer>
+        
+        <!-- ================= SCRIPT JAVASCRIPT ================= -->
+        <script>
+            function cargarMain() {
+                window.location.href = "index.html";
+            }
+
+            function verPerfil() {
+                fetch('PerfilsinLocal.html')
+                    .then(response => response.text())
+                    .then(html => { document.querySelector('.principal').innerHTML = html; })
+                    .catch(error => console.error('Error:', error));
+            }
+
+            // Funciones para las 4 tarjetas
+            function CargarRegistrarProducto() {
+                fetch('registrarp.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('No se pudo cargar Registrar Producto');
+                        return response.text();
+                    })
+                    .then(html => { document.querySelector('.principal').innerHTML = html; })
+                    .catch(error => console.error('Error:', error));
+            }
+
+            function CargarModificarProducto() {
+                fetch('modificarp.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('No se pudo cargar Modificar Producto');
+                        return response.text();
+                    })
+                    .then(html => { document.querySelector('.principal').innerHTML = html; })
+                    .catch(error => console.error('Error:', error));
+            }
+
+            function CargarVerProductos() {
+                fetch('productosp.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('No se pudo cargar Productos');
+                        return response.text();
+                    })
+                    .then(html => { document.querySelector('.principal').innerHTML = html; })
+                    .catch(error => console.error('Error:', error));
+            }
+
+            function CargarEliminarProducto() {
+                fetch('eliminarp.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('No se pudo cargar Eliminar Producto');
+                        return response.text();
+                    })
+                    .then(html => { document.querySelector('.principal').innerHTML = html; })
+                    .catch(error => console.error('Error:', error));
+            }
+        </script>
+    </body>
+</html>

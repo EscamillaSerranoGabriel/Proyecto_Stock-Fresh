@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gestión de Inventario - Stock & Fresh</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Asegúrate de apuntar a tu archivo CSS principal donde pusimos los estilos de las tarjetas -->
+        <link rel="stylesheet" href="estilito/historial.css"/> 
+    </head>
+    <body style="background-color: #FFFBEB; margin: 0; padding: 0;">
+        
+        <!-- ================= ENCABEZADO Y MENÚ ================= -->
+        <header>
+            <div class="header-top">
+                <div class="logo-container">
+                    <img src="logo_fondo_gris.png" alt="Stock & Fresh" width="70" height="70">
+                    <span>Stock & Fresh</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" class="search-bar" placeholder="Buscar...">
+                </div>
+                <div class="logo-usuario">
+                    <img src="icono_usuario_circulo.png" alt="Usuario" width="70" height="70" onclick="verPerfil()">
+                </div>
+                <button class="iniciosesion" onclick="cargarMain()">HOME</button>
+                <span class="cart">$ 0.00</span>
+            </div>
+
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="Ventas.html">Registro de Ventas</a></li>
+                    <li><a href="Caja.html">Caja</a></li>
+                    <li><a href="gestioninventario.html">Gestión de Inventario</a></li>
+                    <li><a href="historial.html">Historial</a></li>
+                    <li><a href="reportesyg.html">Reportes y Gráficas</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ================= CONTENIDO CENTRAL ================= -->
+        <main class="principal">
+            <div class="contenedor-inventario">
+                <h2 class="titulo-inventario">Gestión de Inventario</h2>
+                
+                <div class="tarjetas-inventario">
+                    
+                    <!-- Tarjeta Inventario -->
+                    <div class="tarjeta-opcion">
+                        <!-- El onclick llama a la función en el script de abajo -->
+                        <button class="btn-inventario" onclick="CargarInventarioProductos()">Inventario</button>
+                        <img src="inventario.png" alt="Inventario" class="img-tarjeta">
+                    </div>
+
+                    <!-- Tarjeta Transacciones -->
+                    <div class="tarjeta-opcion">
+                        <button class="btn-transacciones" onclick="CargarTransacciones()">Transacciones</button>
+                        <img src="transaccion.png" alt="Transacciones" class="img-tarjeta">
+                    </div>
+
+                    <!-- Tarjeta Ventas -->
+                    <div class="tarjeta-opcion">
+                        <button class="btn-ventas" onclick="VerVentas()">Ventas</button>
+                        <img src="ventas.png" alt="Ventas" class="img-tarjeta">
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        
+        <footer class="site-footer">
+            <div class="footer-links">
+                <a href="#ubicacion">UBICACIÓN</a>
+                <a href="#contacto">INFORMACIÓN DE CONTACTO</a>
+                <a href="#opiniones">OPINIONES</a>
+                <a href="#eventos">EVENTOS</a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 Stock & Fresh. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+        
+        <!-- ================= SCRIPT JAVASCRIPT ================= -->
+        <script>
+            // Funciones del menú superior
+            function cargarMain() {
+                window.location.href = "index.html";
+            }
+
+            function verPerfil() {
+                fetch('PerfilsinLocal.html')
+                    .then(response => response.text())
+                    .then(html => { document.querySelector('.principal').innerHTML = html; })
+                    .catch(error => console.error('Error:', error));
+            }
+
+            
+            
+            function CargarInventarioProductos() {
+                // Reemplaza 'inventario_productos.html' por el nombre real de tu archivo
+                fetch('inventario.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('No se pudo cargar Inventario');
+                        return response.text();
+                    })
+                    .then(html => { document.querySelector('.principal').innerHTML = html; })
+                    .catch(error => console.error('Error:', error));
+            }
+
+            function CargarTransacciones() {
+               
+                fetch('transacciones.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('No se pudo cargar Transacciones');
+                        return response.text();
+                    })
+                    .then(html => { document.querySelector('.principal').innerHTML = html; })
+                    .catch(error => console.error('Error:', error));
+            }
+
+            function VerVentas() {
+               
+                fetch('ventash.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('No se pudo cargar Ventas');
+                        return response.text();
+                    })
+                    .then(html => { document.querySelector('.principal').innerHTML = html; })
+                    .catch(error => console.error('Error:', error));
+            }
+        </script>
+    </body>
+</html>
+   
+    
+    
+    
+    

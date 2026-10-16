@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="estilito/gestion.css"/>
+
+    
+    <!-- CONTENIDO CENTRAL: REGISTRAR PRODUCTO -->
+<div class="contenedor-inventario">
+    <h2 class="titulo-inventario">Registrar Producto</h2>
+    
+    <!-- Tarjeta principal con borde amarillo -->
+    <div class="tarjeta-registro-producto">
+        
+        <!-- Sección Izquierda: Vista Previa -->
+        <div class="seccion-vista-previa">
+            <span class="label-vista">Vista Previa del Producto</span>
+            
+            <div class="caja-vista-previa">
+                <span class="preview-nombre">---</span>
+                <span class="preview-precio">$0.00</span>
+            </div>
+
+            <button class="btn-registrar-prod">Registrar</button>
+        </div>
+
+        <!-- Sección Derecha: Formulario -->
+        <div class="seccion-formulario-prod">
+            
+            <!-- Fila 1 -->
+            <div class="grupo-input-prod">
+                <label>Nombre</label>
+                <input type="text" placeholder="">
+            </div>
+            
+            <div class="grupo-input-prod">
+                <label>Categoria</label>
+                <select>
+                    <option>Selecciona una categoria</option>
+                    <option>Frutas y Verduras</option>
+                    <option>Lácteos</option>
+                </select>
+            </div>
+
+            <!-- Fila 2 -->
+            <div class="grupo-input-prod">
+                <label>Precio</label>
+                <input type="text" placeholder="$ 0.00">
+            </div>
+            
+            <div class="grupo-input-prod">
+                <label>Unidad de Medida</label>
+                <select>
+                    <option>Selecciona una unidad de medida</option>
+                    <option>kg</option>
+                    <option>pz</option>
+                    <option>L</option>
+                </select>
+            </div>
+
+            <!-- Fila 3 y 4 (Esta caja es especial, abarca hacia abajo) -->
+            <div class="grupo-input-prod caja-icono-objeto">
+                <label>Icono Objeto</label>
+                <div class="grid-iconos-seleccionar">
+                    <span>🍎</span><span>🍐</span><span>🍉</span><span>🍊</span><span>🍓</span>
+                    <span>🍅</span><span>🥕</span><span>🍒</span><span>🍇</span><span>🥛</span>
+                    <span>🧴</span><span>🧼</span><span>🧃</span><span>🧽</span><span>🧻</span>
+                    <span>🍞</span><span>🥚</span><span>🧀</span><span>🥦</span><span>🥩</span>
+                </div>
+            </div>
+            
+            <!-- Fila 3 (Derecha) -->
+            <div class="grupo-input-prod">
+                <label>Provedor</label>
+                <select>
+                    <option>Selecciona un provedor</option>
+                    <option>Proveedor 1</option>
+                    <option>Proveedor 2</option>
+                </select>
+            </div>
+
+            <!-- Fila 4 (Derecha) -->
+            <div class="grupo-input-prod">
+                <label>Cantidad en Stock</label>
+                <input type="text" placeholder="0.00 (ud, pz, kg, L, ml, m, caja, etc.)">
+            </div>
+
+        </div>
+
+    </div>
+</div>

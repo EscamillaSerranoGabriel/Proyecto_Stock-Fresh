@@ -1,0 +1,910 @@
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Apila la barra oscura sobre la barra clara */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   FILA 1: Barra superior (Logo, buscador y usuario)
+   -------------------------------------------------------------------------- */
+.header-top {
+    background-color: #7CCF35; /* Verde principal oscuro */
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between; /* Distribuye los 3 bloques a los extremos */
+    align-items: center; /* Alinea todo verticalmente al centro */
+}
+
+/* Bloque del Logotipo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.search-bar{
+    width: 50%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados estilo cápsula */
+    background-color: #f6fad3; /* Color amarillento suave de fondo */
+    font-size: 14px;
+    outline: none;
+    
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%; /* Hace el fondo del logo circular */
+}
+
+/* Bloque del Buscador Central */
+.search-container {
+    width: 40%; /* Controla el ancho de la barra de búsqueda */
+}
+
+.logo-usuario{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados estilo cápsula */
+    background-color: #f6fad3; /* Color amarillento suave de fondo */
+    font-size: 14px;
+    outline: none;
+}
+
+.cart{
+     width: 5%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados estilo cápsula */
+    background-color: #f6fad3; /* Color amarillento suave de fondo */
+    font-size: 14px;
+    outline: none
+}
+
+.iniciosesion{
+    background-color: #497D15; /* Color de fondo */
+  color: white;            /* Color del texto */
+  padding: 10px 20px;        /* Espacio interno (arriba/abajo y lados) */
+  font-size: 16px;           /* Tamaño del texto */
+  font-family: sans-serif;   /* Tipo de fuente */
+  border: none;              /* Eliminar el borde predeterminado */
+  border-radius: 8px;        /* Redondear las esquinas */
+  cursor: pointer;           /* Cambiar el cursor a una mano al pasar por encima */
+  transition: background-color 0.3s ease; /* Suavizar los efectos */
+}
+
+/* Bloque de Acciones de Usuario (Derecha) */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.btn-login {
+    background-color: #6da64b; /* Verde más encendido para el botón */
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cart-status {
+    background-color: white;
+    padding: 6px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* --------------------------------------------------------------------------
+   FILA 2: Barra inferior (Menú de navegación naranja)
+   -------------------------------------------------------------------------- */
+.header-nav {
+    background-color: #FDC745; /* Verde más claro de fondo */
+    padding: 12px 20px;
+}
+
+.header-nav ul {
+    list-style: none; /* Quita las viñetas o puntos */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los botones */
+    gap: 15px; /* Espacio exacto de separación entre botones */
+}
+
+.header-nav a {
+    display: inline-block;
+    background-color: #e09f3e; /* Color naranja de los botones */
+    color: white;
+    text-decoration: none; /* Quita el subrayado del enlace */
+    padding: 8px 20px;
+    border-radius: 20px; /* Transforma los rectángulos en óvalos */
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+/* Efecto visual al pasar el cursor */
+.header-nav a:hover {
+    background-color: #c9872b; /* Naranja ligeramente más oscuro */
+}
+
+body {
+  margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fcf9e8; /* Tu fondo beige claro */
+    
+    /* ESTO ES LO CLAVE: Fuerza al cuerpo a medir el 100% de la pantalla */
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; /* 100% del alto de la ventana del navegador */
+}
+
+/* 2. Este contenedor absorbe el espacio vacío y empuja al footer hacia abajo */
+.principal{
+  max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    
+}
+
+.site-footer {
+    background-color: #a8d57d; /* El tono verde que estás usando */
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Separa los enlaces del texto de abajo */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px; /* Espacio horizontal bien separado entre cada enlace */
+    width: 100%;
+}
+
+.footer-links a {
+    color: #2c4c1e; /* Color oscuro para que contraste bien con el verde */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    color: #2c4c1e;
+    font-size: 13px;
+    text-align: center;
+}
+
+/*estilomain*/
+
+.ventas-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.section-title {
+    text-align: center;
+    color: #b84a4a;
+    font-size: 34px; /* Título más grande */
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.venta-card {
+    background: #ffffff;
+    border: 2px solid #e8a5a5;
+    border-radius: 20px;
+    width: 245px; /* Ligeramente más anchas para acomodar los botones grandes */
+    height: 305px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    position: relative;
+}
+
+.btn-pill {
+    padding: 12px 18px; /* Botones más altos y grandes */
+    border: none;
+    border-radius: 22px;
+    font-size: 15px; /* Texto del botón más grande */
+    font-weight: bold;
+    color: #222;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    width: 94%; /* Botones más anchos dentro de la tarjeta */
+    text-align: center;
+    transition: transform 0.1s;
+}
+
+.btn-pill:hover {
+    transform: scale(1.02);
+}
+
+.btn-green {
+    background-color: #b8e994;
+}
+
+.btn-yellow {
+    background-color: #f6b93b;
+    color: #111;
+}
+
+.icon-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*estiloRegistroVenta.html*/
+
+/* Contenedor general de la vista */
+.registrar-venta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #b84a4a;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+/* CONTENEDOR VERTICAL: Alinea las dos tarjetas una debajo de la otra */
+.ventas-main-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 25px !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    box-sizing: border-box;
+}
+
+/* Estilos comunes para ambas tarjetas */
+.productos-card{
+    width: 550px !important;
+    min-width: 550px !important;
+    background: #ffffff;
+    border: 2px solid #ebdcb8;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.checkout-card {
+    width: 600px !important;
+    min-width: 600px !important;
+    background: #ffffff;
+    border: 2px solid #ebdcb8;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    display: flex;
+    gap: 25px;
+}
+
+/* Tarjeta Izquierda (Productos) */
+.productos-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Tarjeta Derecha (Checkout / Totales) con diseño interno de dos columnas */
+.checkout-card {
+    display: flex;
+    gap: 25px;
+}
+
+/* --- Elementos Internos de la Tarjeta Izquierda --- */
+.productos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productos-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e8a5a5;
+    border-radius: 20px;
+    padding: 6px 12px;
+    background-color: #fffcfc;
+    width: 240px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 13px;
+    width: 100%;
+}
+
+.productos-grid-container {
+    border: 1.5px solid #e8a5a5;
+    border-radius: 14px;
+    padding: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.prod-item-card {
+    background: #ffffff;
+    border: 1px solid #ebdcb8;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.prod-info {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.prod-name {
+    font-size: 12px;
+    font-weight: bold;
+    color: #222;
+    display: block;
+}
+
+.prod-price {
+    font-size: 11px;
+    color: #555;
+}
+
+.prod-img {
+    font-size: 32px;
+    margin: 5px 0;
+}
+
+.counter-box {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 5px;
+}
+
+.cnt-btn {
+    background: transparent;
+    border: none;
+    color: #b84a4a;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cnt-input {
+    width: 35px;
+    height: 20px;
+    border: 1px solid #e8a5a5;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    font-size: 11px;
+    background-color: #fffcfc;
+}
+
+/* --- Elementos Internos de la Tarjeta Derecha --- */
+.checkout-left-col, 
+.checkout-right-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+}
+
+.checkout-divider {
+    width: 2px;
+    background-image: linear-gradient(to bottom, #e8a5a5 50%, transparent 50%);
+    background-size: 2px 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 3px;
+}
+
+.form-control {
+    padding: 7px 10px;
+    border: 1px solid #e8a5a5;
+    border-radius: 6px;
+    outline: none;
+    font-size: 13px;
+    background-color: #fffcfc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    border-color: #b84a4a;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #222;
+    margin: 2px 0;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.payment-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 2px;
+}
+
+.radio-label {
+    font-size: 12px;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.select-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 24 24' width='16' height='16' fill='%23b84a4a' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+}
+
+.btn-realizar-venta {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 5px;
+    transition: opacity 0.2s;
+}
+
+.btn-realizar-venta:hover {
+    opacity: 0.9;
+}
+
+/*boton en modificar venta*/
+.btn-realizar-cambio {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 5px;
+    transition: opacity 0.2s;
+}
+
+.btn-realizar-cambio:hover {
+    opacity: 0.9;
+}
+
+/*DiseñoEliminarVentas.html*/
+.eliminar-venta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #b84a4a;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.eliminar-card {
+    background: #ffffff;
+    border: 2px solid #ebdcb8;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.eliminar-card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+}
+
+.ventas-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 380px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.venta-row-item {
+    background-color: #d9534f;
+    border-radius: 10px;
+    padding: 14px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.venta-row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.venta-row-bottom {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.venta-text {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.btn-eliminar {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    align-self: center;
+    margin-top: 10px;
+    transition: opacity 0.2s;
+}
+
+.btn-eliminar:hover {
+    opacity: 0.9;
+}
+
+/*Diseño VerVentas.html*/
+.ventas-historial-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #b84a4a;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.historial-card {
+    background: #ffffff;
+    border: 2px solid #ebdcb8;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.historial-card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+}
+
+.historial-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 450px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.venta-detalle-box {
+    background: #ffffff;
+    border: 1.5px solid #e8a5a5;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.detalle-col-left,
+.detalle-col-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detalle-divider {
+    width: 2px;
+    background-image: linear-gradient(to bottom, #e8a5a5 50%, transparent 50%);
+    background-size: 2px 10px;
+}
+
+.detalle-text {
+    font-size: 13px;
+    font-weight: bold;
+    color: #222;
+}
+
+.productos-seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 5px;
+}
+
+.productos-label-title {
+    margin-bottom: 0;
+}
+
+.productos-scroll-box {
+    border: 1.5px solid #e8a5a5;
+    border-radius: 8px;
+    height: 90px;
+    background-color: #fffcfc;
+    overflow-y: auto;
+}
+
+/*Diseño VerVaModificar*/
+.modificar-venta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #b84a4a;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.modificar-card {
+    background: #ffffff;
+    border: 2px solid #ebdcb8;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modificar-card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+}
+
+.modificar-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 450px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.venta-modificar-box {
+    background: #ffffff;
+    border: 1.5px solid #e8a5a5;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    position: relative; /* Permite posicionar el botón de edición de forma absoluta si se desea */
+}
+
+.detalle-col-left,
+.detalle-col-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative; /* Necesario para anclar el botón de editar abajo a la derecha */
+}
+
+.detalle-divider {
+    width: 2px;
+    background-image: linear-gradient(to bottom, #e8a5a5 50%, transparent 50%);
+    background-size: 2px 10px;
+}
+
+.detalle-text {
+    font-size: 13px;
+    font-weight: bold;
+    color: #222;
+}
+
+.productos-seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 5px;
+}
+
+.productos-label-title {
+    margin-bottom: 0;
+}
+
+.productos-scroll-box {
+    border: 1.5px solid #e8a5a5;
+    border-radius: 8px;
+    height: 90px;
+    background-color: #fffcfc;
+    overflow-y: auto;
+}
+
+/* Estilo para el botón flotante del lápiz de edición */
+.btn-editar-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #ffffff;
+    border: 1.5px solid #e8a5a5;
+    border-radius: 8px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: background-color 0.2s;
+}
+
+.btn-editar-icon:hover {
+    background-color: #fff6f6;
+}

@@ -1,0 +1,352 @@
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Apila la barra oscura sobre la barra clara */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   FILA 1: Barra superior (Logo, buscador y usuario)
+   -------------------------------------------------------------------------- */
+.header-top {
+    background-color: #7CCF35; /* Verde principal oscuro */
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between; /* Distribuye los 3 bloques a los extremos */
+    align-items: center; /* Alinea todo verticalmente al centro */
+}
+
+/* Bloque del Logotipo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.search-bar{
+    width: 50%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados estilo cápsula */
+    background-color: #f6fad3; /* Color amarillento suave de fondo */
+    font-size: 14px;
+    outline: none;
+    
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%; /* Hace el fondo del logo circular */
+}
+
+/* Bloque del Buscador Central */
+.search-container {
+    width: 40%; /* Controla el ancho de la barra de búsqueda */
+}
+
+.logo-usuario{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados estilo cápsula */
+    background-color: #f6fad3; /* Color amarillento suave de fondo */
+    font-size: 14px;
+    outline: none;
+}
+
+.cart{
+     width: 5%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados estilo cápsula */
+    background-color: #f6fad3; /* Color amarillento suave de fondo */
+    font-size: 14px;
+    outline: none
+}
+
+.iniciosesion{
+    background-color: #497D15; 
+  color: white;           
+  padding: 10px 20px;        
+  font-size: 16px;          
+  border: none;              
+  border-radius: 8px;        
+  cursor: pointer;          
+  transition: background-color 0.3s ease;
+}
+
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.btn-login {
+    background-color: #6da64b; 
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cart-status {
+    background-color: white;
+    padding: 6px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333;
+}
+.principal{
+  max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    
+}
+.site-footer {
+    background-color: #a8d57d; 
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+    
+
+    width: 100%; 
+    box-sizing: border-box;
+    margin-top: auto; 
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px; 
+    width: 100%;
+}
+
+.footer-links a {
+    color: #2c4c1e; 
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    color: #2c4c1e;
+    font-size: 13px;
+    text-align: center;
+}
+.footer-copy p {
+    margin: 0; 
+    padding: 0;
+}
+
+
+.header-nav {
+    background-color: #FDC745; 
+    padding: 12px 20px;
+}
+
+.header-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    gap: 15px; 
+}
+
+.header-nav a {
+    display: inline-block;
+    background-color: #e09f3e; 
+    color: white;
+    text-decoration: none; 
+    padding: 8px 20px;
+    border-radius: 20px; 
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+
+.header-nav a:hover {
+    background-color: #c9872b; 
+}
+body {
+  margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fcf9e8;
+    
+  
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.contenedor-inventario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    width: 100%;
+}
+
+
+.titulo-inventario {
+    color: #D65A70;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+
+.tarjetas-inventario {
+    display: flex;
+    gap: 50px; 
+    justify-content: center;
+}
+
+
+.tarjeta-opcion {
+    background-color: #FFFFFF;
+    border: 2px solid #D65A70;
+    border-radius: 20px; 
+    width: 250px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+}
+
+
+.btn-inventario, 
+.btn-transacciones,
+.btn-ventas{
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    cursor: pointer;
+    width: 80%;
+    margin-bottom: 40px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+.btn-inventario {
+    background-color: #B2E58C; 
+}
+
+.btn-transacciones {
+    background-color: #F7C04A; 
+}
+.btn-ventas {
+    background-color: #B2E58C; 
+}
+
+
+.img-tarjeta {
+    max-width: 130px;
+    height: auto;
+}
+
+
+.contenedor-tabla {
+    background-color: #FFFFFF;
+    border: 3px solid #FDC745; 
+    border-radius: 15px; 
+    width: 90%;
+    max-width: 1000px;
+    padding: 10px 15px; 
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    
+   
+    max-height: 400px; 
+    overflow-y: auto; 
+}
+
+
+.tabla-ventas {
+    width: 100%;
+    border-collapse: collapse; 
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+
+.tabla-ventas th {
+    background-color: #F48C8C; 
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border: 3px solid #D65A70; 
+
+
+.tabla-ventas td {
+    padding: 12px;
+    border: 3px solid #D65A70; 
+    height: 40px; 
+}
+
+
+.tabla-ventas tbody tr:nth-child(odd) {
+    background-color: #FFFFFF; 
+}
+
+.tabla-ventas tbody tr:nth-child(even) {
+    background-color: #FAD4D4; 
+}
+
+.contenedor-tabla::-webkit-scrollbar {
+    width: 10px;
+}
+.contenedor-tabla::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+.contenedor-tabla::-webkit-scrollbar-thumb {
+    background: #e0e0e0; 
+    border-radius: 10px;
+}

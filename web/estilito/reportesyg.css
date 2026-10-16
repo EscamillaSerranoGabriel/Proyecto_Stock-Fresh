@@ -1,0 +1,350 @@
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Apila la barra oscura sobre la barra clara */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   FILA 1: Barra superior (Logo, buscador y usuario)
+   -------------------------------------------------------------------------- */
+.header-top {
+    background-color: #7CCF35; /* Verde principal oscuro */
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between; /* Distribuye los 3 bloques a los extremos */
+    align-items: center; /* Alinea todo verticalmente al centro */
+}
+
+/* Bloque del Logotipo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.search-bar{
+    width: 50%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados estilo cápsula */
+    background-color: #f6fad3; /* Color amarillento suave de fondo */
+    font-size: 14px;
+    outline: none;
+    
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%; /* Hace el fondo del logo circular */
+}
+
+/* Bloque del Buscador Central */
+.search-container {
+    width: 40%; /* Controla el ancho de la barra de búsqueda */
+}
+
+.logo-usuario{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados estilo cápsula */
+    background-color: #f6fad3; /* Color amarillento suave de fondo */
+    font-size: 14px;
+    outline: none;
+}
+
+.cart{
+     width: 5%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados estilo cápsula */
+    background-color: #f6fad3; /* Color amarillento suave de fondo */
+    font-size: 14px;
+    outline: none
+}
+
+.iniciosesion{
+    background-color: #497D15; /* Color de fondo */
+  color: white;            /* Color del texto */
+  padding: 10px 20px;        /* Espacio interno (arriba/abajo y lados) */
+  font-size: 16px;           /* Tamaño del texto */
+  font-family: sans-serif;   /* Tipo de fuente */
+  border: none;              /* Eliminar el borde predeterminado */
+  border-radius: 8px;        /* Redondear las esquinas */
+  cursor: pointer;           /* Cambiar el cursor a una mano al pasar por encima */
+  transition: background-color 0.3s ease; /* Suavizar los efectos */
+}
+
+/* Bloque de Acciones de Usuario (Derecha) */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.btn-login {
+    background-color: #6da64b; /* Verde más encendido para el botón */
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cart-status {
+    background-color: white;
+    padding: 6px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333;
+}
+.principal{
+  max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    
+}
+
+.site-footer {
+    background-color: #a8d57d; /* El tono verde que estás usando */
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Separa los enlaces del texto de abajo */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px; /* Espacio horizontal bien separado entre cada enlace */
+    width: 100%;
+}
+
+.footer-links a {
+    color: #2c4c1e; /* Color oscuro para que contraste bien con el verde */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    color: #2c4c1e;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   FILA 2: Barra inferior (Menú de navegación naranja)
+   -------------------------------------------------------------------------- */
+.header-nav {
+    background-color: #FDC745; /* Verde más claro de fondo */
+    padding: 12px 20px;
+}
+
+.header-nav ul {
+    list-style: none; /* Quita las viñetas o puntos */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los botones */
+    gap: 15px; /* Espacio exacto de separación entre botones */
+}
+
+.header-nav a {
+    display: inline-block;
+    background-color: #e09f3e; /* Color naranja de los botones */
+    color: white;
+    text-decoration: none; /* Quita el subrayado del enlace */
+    padding: 8px 20px;
+    border-radius: 20px; /* Transforma los rectángulos en óvalos */
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+/* Efecto visual al pasar el cursor */
+.header-nav a:hover {
+    background-color: #c9872b; /* Naranja ligeramente más oscuro */
+}
+body {
+  margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fcf9e8; /* Tu fondo beige claro */
+    
+    
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+}
+
+
+.contenedor-inventario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+
+.titulo-inventario {
+    color: #D65A70; 
+    font-family: "Times New Roman", Times, serif;
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+.contenedor-reportes {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    width: 90%;
+    max-width: 1100px;
+    flex-wrap: wrap; 
+    margin: 0 auto; 
+    align-items: stretch;;
+}
+
+
+.tarjeta-reporte {
+    background-color: #FFFFFF;
+    border: 3px solid #FDC745; 
+    border-radius: 15px;
+    flex: 1; 
+    min-width: 400px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+
+.header-grafica {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.label-grafica {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+}
+
+
+.select-opcion {
+    padding: 8px 15px;
+    border: 1px solid #D65A70; 
+    color: #D65A70;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.tarjeta-grafica-izq {
+    max-height: 480px; 
+    display: flex;
+    flex-direction: column;
+}
+.imagen-grafica {
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    max-height: 320px; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.titulo-info {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
+.lista-totales {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.item-total {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #D65A70;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 15px 20px;
+}
+
+
+.icono-fondo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.texto-total {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+}
+
+
+ 
+

@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="estilito/CajaEstilo.css"/>
+<div class="apertura-caja-wrapper">
+    <h2 class="section-title">Apertura de Caja</h2>
+    
+    <div class="apertura-card">
+        <!-- Columna Izquierda -->
+        <div class="apertura-col-left">
+            <div class="form-group">
+                <label>Fondo Inicial</label>
+                <input type="text" class="form-control" value="$ 0.00">
+            </div>
+
+            <div class="form-group">
+                <label>Fecha</label>
+                <div class="input-icon-wrapper">
+                    <input type="text" class="form-control" value="00 / 00 / 0000">
+                    <svg class="input-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#b84a4a" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                        <rect x="7" y="14" width="2" height="2" fill="#b84a4a"></rect>
+                        <rect x="11" y="14" width="2" height="2" fill="#b84a4a"></rect>
+                        <rect x="15" y="14" width="2" height="2" fill="#b84a4a"></rect>
+                        <rect x="7" y="18" width="2" height="2" fill="#b84a4a"></rect>
+                        <rect x="11" y="18" width="2" height="2" fill="#b84a4a"></rect>
+                        <rect x="15" y="18" width="2" height="2" fill="#b84a4a"></rect>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Hora</label>
+                <div class="input-icon-wrapper">
+                    <input type="text" class="form-control" value="00 : 00">
+                    <svg class="input-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#b84a4a" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="apertura-divider"></div>
+
+        <!-- Columna Derecha -->
+        <div class="apertura-col-right">
+            <div class="form-group">
+                <label>Empleado</label>
+                <select class="form-control select-control">
+                    <option value="" disabled selected>Selecciona un empleado</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>No. Caja</label>
+                <select class="form-control select-control">
+                    <option value="" disabled selected>Selecciona una Caja/Turno</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Turno</label>
+                <select class="form-control select-control">
+                    <option value="" disabled selected>Selecciona una Caja/Turno</option>
+                </select>
+            </div>
+
+            <button class="btn-aperturar">Aperturar</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gestión de Inventario - Stock & Fresh</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Enlace a tu CSS -->
+        <link rel="stylesheet" href="estilito/gestion.css"/> 
+    </head>
+    <body>
+        <!-- ================= ENCABEZADO Y MENÚ ================= -->
+        <header>
+            <div class="header-top">
+                <div class="logo-container">
+                    <img src="logo_fondo_gris.png" alt="Stock & Fresh" width="70" height="70">
+                    <span>Stock & Fresh</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" class="search-bar" placeholder="Buscar...">
+                </div>
+                <div class="logo-usuario">
+                    <img src="icono_usuario_circulo.png" alt="Usuario" width="70" height="70" onclick="verPerfil()">
+                </div>
+                <button class="iniciosesion" onclick="cargarMain()">HOME</button>
+                <span class="cart">$ 0.00</span>
+            </div>
+
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="Ventas.html">Registro de Ventas</a></li>
+                    <li><a href="Caja.html">Caja</a></li>
+                    <li><a href="gestioninventario.html">Gestión de Inventario</a></li>
+                    <li><a href="historial.html">Historial</a></li>
+                    <li><a href="reportesyg.html">Reportes y Gráficas</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ================= CONTENIDO CENTRAL ================= -->
+        <main class="principal">
+            <div class="contenedor-inventario">
+                <!-- Título -->
+                <h2 class="titulo-inventario">Gestión de Inventario</h2>
+                
+                <div class="tarjetas-inventario">
+                    
+                    <!-- Tarjeta Productos -->
+                    <div class="tarjeta-opcion" onclick="CargarProductos()">
+                        <button class="btn-productos">Productos</button>
+                        <br><br>
+                        <img src="productos.png" alt="Productos" class="img-tarjeta"> 
+                    </div>
+
+                    <!-- Tarjeta Alertas -->
+                    <div class="tarjeta-opcion" onclick="CargarAlertas()">
+                        <button class="btn-alertas">Alertas</button>
+                        <br><br>
+                        <img src="alertas.png" alt="Alertas" class="img-tarjeta">
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <!-- ================= FOOTER ================= -->
+         <footer class="site-footer">
+    <div class="footer-links">
+        <a href="#ubicacion">UBICACIÓN</a>
+        <a href="#contacto">INFORMACIÓN DE CONTACTO</a>
+        <a href="#opiniones">OPINIONES</a>
+        <a href="#eventos">EVENTOS</a>
+    </div>
+    <div class="footer-copy">
+        <p>&copy; 2026 Stock & Fresh. Todos los derechos reservados.</p>
+    </div>
+</footer>
+        
+        <!-- ================= SCRIPT JAVASCRIPT ================= -->
+        <script>
+            // Funciones del menú superior
+            function cargarMain() {
+                window.location.href = "index.html";
+            }
+
+            function verPerfil() {
+                fetch('PerfilsinLocal.html')
+                    .then(response => response.text())
+                    .then(html => { document.querySelector('.principal').innerHTML = html; })
+                    .catch(error => console.error('Error:', error));
+            }
+            
+            // ================= FUNCIONES DE LAS TARJETAS =================
+
+            function CargarProductos() {
+                // Redirige a la página de productos
+                window.location.href = "productos.html"; 
+            }
+
+            function CargarAlertas() {
+                // Redirige a la página de alertas
+                window.location.href = "alertas.html";
+            }
+        </script>
+    </body>
+</html>
