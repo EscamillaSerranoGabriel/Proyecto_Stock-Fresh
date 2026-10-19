@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alertas - Stock & Fresh</title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Apunta a tu archivo de estilos principal -->
+        <link rel="stylesheet" href="estilito/gestion.css"/> 
+    </head>
+    <body>
+        
+        <!-- ================= ENCABEZADO Y MENÚ ================= -->
+        <header>
+            <div class="header-top">
+                <div class="logo-container">
+                    <img src="logo_fondo_gris.png" alt="Stock & Fresh" class="logo-img">
+                    <span>Stock & Fresh</span>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Buscar...">
+                </div>
+                <div class="user-actions">
+                    <img src="icono_usuario_circulo.png" alt="Usuario" class="avatar" onclick="verPerfil()">
+                    <button class="iniciosesion" onclick="cargarMain()">HOME</button>
+                    <span class="cart-status">$ 0.00</span>
+                </div>
+            </div>
+
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="Ventas.html">Registro de Ventas</a></li>
+                    <li><a href="Caja.html">Caja</a></li>
+                    <li><a href="gestioninventario.html">Gestión de Inventario</a></li>
+                    <li><a href="historial.html">Historial</a></li>
+                    <li><a href="reportesyg.html">Reportes y Gráficas</a></li>
+                </ul>
+            </nav>
+        </header>
+
+     
+        <main class="principal">
+            <img src="naranja.png" alt="Naranja" class="fruta fruta-naranja">
+        <img src="manzana.png" alt="Manzana" class="fruta fruta-manzana">
+        <img src="aguacatepro.png" alt="Aguacate" class="fruta fruta-aguacate">
+        <img src="arandanos.png" alt="Arándanos" class="fruta fruta-arandanos">
+            <div class="contenedor-inventario">
+                <h2 class="titulo-inventario">Alertas</h2>
+                
+                <div class="tarjeta-alertas-producto">
+                    <h3 class="titulo-lista-prod">Notificaciones</h3>
+                    
+                    
+                    <div class="lista-productos-alertas">
+                        
+                        <!-- Alerta 1 -->
+<div class="item-producto-alertas" onclick="this.classList.toggle('seleccionada')">
+    <div class="icono-prod-alertas">🍎</div>
+    <div class="texto-alerta">
+        <span>Ya no queda tanto stock de Manzanas!</span>
+    </div>
+    <div class="fecha-alerta">
+        <span>00 / 00 / 0000</span>
+        <span>00:00</span>
+    </div>
+</div>
+
+<!-- Alerta 2 -->
+<div class="item-producto-alertas" onclick="this.classList.toggle('seleccionada')">
+    <div class="icono-prod-alertas bg-celeste">🥛</div>
+    <div class="texto-alerta">
+        <span>Ya no queda más stock de Leche!</span>
+    </div>
+    <div class="fecha-alerta">
+        <span>00 / 00 / 0000</span>
+        <span>00:00</span>
+    </div>
+</div>
+
+<!-- Alerta 3 -->
+<div class="item-producto-alertas" onclick="this.classList.toggle('seleccionada')">
+    <div class="icono-prod-alertas bg-rosa">🧼</div>
+    <div class="texto-alerta">
+        <span>Tienes 0 stock de jabón corporal!</span>
+    </div>
+    <div class="fecha-alerta">
+        <span>00 / 00 / 0000</span>
+        <span>00:00</span>
+    </div>
+</div>
+                        
+
+                    </div>
+
+                    
+                    <div class="btn-alertas-container">
+                        <button class="btn-alertas-accion">Eliminar Notificaciones</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="site-footer">
+            <div class="footer-links">
+                <a href="#ubicacion">Ubicación</a>
+                <a href="#contacto">Información de Contacto</a>
+                <a href="#opiniones">Opiniones</a>
+                <a href="#eventos">Eventos</a>
+            </div>
+        </footer>
+    <script>
+            function cargarMain() {
+    // Opción A: Recarga la página principal del proyecto
+    window.location.href = "index.html";
+   
+}
+        
+        function cargarLogin() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('InicioSesion.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+    function cargarRegistro(){
+    fetch('Registro.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+    </script>
+    </body>
+</html>

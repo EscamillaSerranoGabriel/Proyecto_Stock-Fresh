@@ -1,0 +1,244 @@
+.perfil-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 10px 20px;
+        flex-wrap: wrap;
+        font-family: Arial, sans-serif;
+        background-color: transparent;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .perfil-section {
+        flex: 1;
+        min-width: 480px;
+        max-width: 570px;
+    }
+
+    .section-title {
+        text-align: center;
+        color: #b84a4a;
+        font-size: 24px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-family: serif;
+    }
+
+    .card {
+        background: #ffffff;
+        border: 2px solid #ebdcb8;
+        border-radius: 18px;
+        padding: 20px 25px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-content {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .profile-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 38%;
+    }
+
+    .avatar-container {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .avatar-placeholder {
+        width: 100%;
+        height: 100%;
+        border: 3px solid #b84a4a;
+        border-radius: 50%;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .profile-info-text {
+        font-size: 13px;
+        color: #222;
+        text-align: left;
+        width: 100%;
+    }
+
+    .profile-info-text p {
+        margin: 5px 0;
+    }
+
+    .profile-right {
+        width: 62%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group label {
+        font-size: 13px;
+        font-weight: bold;
+        color: #222;
+        margin-bottom: 4px;
+    }
+
+    .form-control {
+        padding: 8px 12px;
+        border: 1px solid #e8a5a5;
+        border-radius: 6px;
+        outline: none;
+        font-size: 14px;
+        background-color: #fffcfc;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-control:focus {
+        border-color: #b84a4a;
+    }
+
+    .card-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        border-top: 1px solid #f2f2f2;
+        padding-top: 15px;
+    }
+
+    .left-buttons, .right-buttons {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .btn {
+        padding: 7px 15px;
+        border: none;
+        border-radius: 15px;
+        font-size: 12.5px;
+        font-weight: bold;
+        cursor: pointer;
+        color: white;
+        transition: opacity 0.2s;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+
+    .btn-danger {
+        background-color: #b84a4a;
+    }
+
+    .btn-primary {
+        background-color: #b84a4a;
+    }
+
+    .btn-icon {
+        background: #fffaf5;
+        border: 1px solid #ebdcb8;
+        border-radius: 6px;
+        padding: 6px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-icon:hover {
+        background-color: #f7ede2;
+    }
+
+    /* Estilos específicos para la tarjeta de Local vacía */
+    .card-local-empty {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* Coincide exactamente con la altura de la tarjeta de perfil izquierda */
+        min-height: 247px; 
+        box-sizing: border-box;
+    }
+
+    .local-empty-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .local-msg {
+        font-size: 15px;
+        color: #222;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+    .btn-agregar-local {
+        background-color: #d9534f;
+        color: white;
+        padding: 10px 28px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transition: opacity 0.2s;
+    }
+
+    .btn-agregar-local:hover {
+        opacity: 0.9;
+    }
+/*diseño frutas*/
+.fruta-manzana {
+    bottom: -30px;
+    left: 0px;
+    width: 230px;
+}
+
+.fruta-pera {
+    top: 5px;
+    left: 41%;
+    width: 200px;
+}
+
+.fruta-zanahoria {
+    bottom: 50px;
+    left: 52%;
+    width: 210px;
+}
+
+.fruta-aguacate {
+    top: -0px;
+    right: -0px;
+    width: 170px;
+}
+
+.fruta-arandanos {
+    bottom: -30px;
+    right: 0px;
+    width: 230px;
+}

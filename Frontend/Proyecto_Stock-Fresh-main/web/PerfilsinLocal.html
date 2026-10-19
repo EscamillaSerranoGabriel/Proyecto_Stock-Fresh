@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="estilito/diseñoPerfiles.css"/>
+<div class="perfil-wrapper">
+            <img src="naranja.png" alt="Naranja" class="fruta fruta-naranja">
+            <img src="manzana.png" alt="Manzana" class="fruta fruta-manzana">
+            <img src="aguacatepro.png" alt="Aguacate" class="fruta fruta-aguacate">
+            <img src="arandanos.png" alt="Arándanos" class="fruta fruta-arandanos">
+    <!-- Sección: Tu Perfil -->
+    <div class="perfil-section">
+        <h2 class="section-title">Tu Perfil</h2>
+        <div class="card">
+            <div class="card-content">
+                <div class="profile-left">
+                    <div class="avatar-container">
+                        <div class="avatar-placeholder">
+                            <svg viewBox="0 0 24 24" width="70" height="70" fill="#b84a4a">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="profile-info-text">
+                        <p><strong>Nombre de Locatario:</strong></p>
+                        <p><strong>ID de Locatario:</strong></p>
+                    </div>
+                </div>
+
+                <div class="profile-right">
+                    <div class="form-group">
+                        <label>Correo Electrónico</label>
+                        <input type="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Número Telefónico</label>
+                        <input type="tel" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input type="password" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-actions">
+                <div class="left-buttons">
+                    <button class="btn btn-danger">Cerrar Sesión</button>
+                    <button class="btn btn-danger">Eliminar Cuenta</button>
+                </div>
+                <div class="right-buttons">
+                    <button class="btn btn-primary">Guardar Cambios</button>
+                    <button class="btn-icon">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="#b84a4a"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección: Local (Nuevo diseño centrado con botón Agregar Local) -->
+    <div class="perfil-section">
+        <h2 class="section-title">Local</h2>
+        <div class="card card-local-empty">
+            <div class="local-empty-content">
+                <p class="local-msg">¡Registra y administra tu local<br>para comenzar a gestionar su<br>inventario y ventas!</p>
+                <button class="btn btn-agregar-local" onclick="AgregarLocal()">Agregar Local</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

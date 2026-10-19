@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilito/css.css"/>
+    </head>
+    <header>
+            <div class="header-top">
+                <div class="logo-container">
+                    <img src="logo_fondo_gris.png" alt="Stock & Fresh" class="logo-img">
+                    <span>Stock & Fresh</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text"  placeholder="Buscar...">
+                </div>
+                <div class="user-actions">
+                <div class="logo-usuario">
+                    <img src="icono_usuario_circulo.png" alt="Stock & Fresh" class="avatar" onclick="verPerfil()">
+                </div>
+                <button class="iniciosesion" onclick="cargarMain()">HOME</button>
+                <span class="cart">$ 0.00</span>
+            </div>
+            </div>
+
+            <!-- FILA 2: Menú de navegación principal -->
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="Ventas.html">Registro de Ventas</a></li>
+                    <li><a href="Caja.html">Caja</a></li>
+                    <li><a href="gestioninventario.html">Gestión de Inventario</a></li>
+                    <li><a href="historial.html">Historial</a></li>
+                    <li><a href="reportesyg.html">Reportes y Gráficas</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="principal">
+            <!-- FRUTAS FLOTANTES DECORATIVAS -->
+            <img src="naranja.png" alt="Naranja" class="fruta fruta-naranja">
+            <img src="manzana.png" alt="Manzana" class="fruta fruta-manzana">
+            <img src="pera_pro.png" alt="Pera" class="fruta fruta-pera">
+            <img src="zanahoria_pro.png" alt="Zanahoria" class="fruta fruta-zanahoria">
+            <img src="aguacatepro.png" alt="Aguacate" class="fruta fruta-aguacate">
+            <img src="arandanos.png" alt="Arándanos" class="fruta fruta-arandanos">
+
+            <div class="main-content">
+                <h1>Bienvenido a <br><span>Stock & Fresh!</span></h1>
+                
+                <p>Stock & Fresh te ayuda a administrar las ventas y el inventario de tu negocio; 
+                registrar los créditos de tus clientes; y analizar el rendimiento diario con 
+                estadísticas claras.</p>
+                
+                <div class="main-buttons">
+                    <button onclick="cargarRegistro()" class="btn-iniciar">Registrarse</button>
+                    <button onclick="cargarLogin()" class="btn-iniciar">Iniciar Sesión</button>
+                </div>
+            </div>
+
+            <!-- BLOQUE DERECHO: Imagen del Círculo -->
+            <div class="main-image-container">
+                <div class="circle-logo">
+                    <img src="logo_fondo_gris.png" alt="Stock & Fresh Logo Grande">
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-links">
+                <a href="#ubicacion">Ubicación</a>
+                <a href="#contacto">Información de Contacto</a>
+                <a href="#opiniones">Opiniones</a>
+                <a href="#eventos">Eventos</a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 Stock & Fresh. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+        <script>
+            function cargarMain() {
+    // Opción A: Recarga la página principal del proyecto
+    window.location.href = "index.html";
+   
+}
+        
+        function cargarLogin() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('InicioSesion.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+    function cargarRegistro(){
+    fetch('Registro.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+    
+    function SegRegistro() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('DatosRegistro.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function verPerfil() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('PerfilsinLocal.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function AgregarLocal() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('AgregarLocal.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function PerfilListo() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('Perfil.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+</script>
+    </body>
+</html>

@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title>Editar Producto - Stock & Fresh</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Asegúrate de que el nombre de tu archivo CSS sea el correcto -->
+        <link rel="stylesheet" href="estilito/gestion.css"/> 
+    </head>
+    <body>
+        <main class="principal">
+            <img src="naranja.png" alt="Naranja" class="fruta fruta-naranja">
+        <img src="manzana.png" alt="Manzana" class="fruta fruta-manzana">
+        <img src="aguacatepro.png" alt="Aguacate" class="fruta fruta-aguacate">
+        <img src="arandanos.png" alt="Arándanos" class="fruta fruta-arandanos">
+            <div class="header-titulo-seccion">
+            <h2 class="titulo-inventario" style="text-align: center;">Editar Producto</h2>
+            </div>
+
+<div class="contenedor-edicion">
+    <!-- PANEL IZQUIERDO: Lista de Productos -->
+    <div class="panel-edicion panel-izquierdo">
+        <div class="panel-cabecera">
+            <h2 class="panel-titulo">Productos</h2>
+            <div class="busqueda-producto">
+                <span>🔍</span>
+                <input type="text" placeholder="Buscar...">
+            </div>
+        </div>
+        
+        <div class="grid-productos">
+            <!-- Tarjeta 1 -->
+            <div class="tarjeta-miniatura">
+                <h4>Jitomate</h4>
+                <p>$0.00</p>
+                <img src="jitomate.png" alt="Jitomate">
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="tarjeta-miniatura">
+                <h4>Pera</h4>
+                <p>$0.00</p>
+                <img src="pera.png" alt="Pera">
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="tarjeta-miniatura">
+                <h4>Zanahoria</h4>
+                <p>$0.00</p>
+                <img src="zanahoria.png" alt="Zanahoria">
+            </div>
+            <!-- Tarjeta 4 -->
+            <div class="tarjeta-miniatura">
+                <h4>Brocoli</h4>
+                <p>$0.00</p>
+                <img src="brocoli.png" alt="Brocoli">
+            </div>
+            <!-- Tarjeta 5 -->
+            <div class="tarjeta-miniatura">
+                <h4>Platano</h4>
+                <p>$0.00</p>
+                <img src="platano.png" alt="Platano">
+            </div>
+            <!-- Tarjeta 6 -->
+            <div class="tarjeta-miniatura">
+                <h4>Aguacate</h4>
+                <p>$0.00</p>
+                <img src="aguacate.png" alt="Aguacate">
+            </div>
+        </div>
+    </div>
+
+    <!-- PANEL DERECHO: Vista Previa y Formulario -->
+    <div class="panel-edicion panel-derecho">
+        <div class="panel-cabecera">
+            <h3 class="panel-titulo">Vista Previa del Producto</h3>
+            <button class="btn-editar-icono">✏️</button>
+        </div>
+        
+        <div class="contenido-detalle">
+            <!-- Tarjeta de Vista Previa Grande -->
+            <div class="tarjeta-previa">
+                <h4>Jitomate</h4>
+                <p>$0.00</p>
+                <img src="jitomate.png" alt="Jitomate">
+            </div>
+            
+            <!-- Formulario de Edición -->
+            <form class="formulario-producto">
+                <div class="form-grupo">
+                    <label>Nombre</label>
+                    <input type="text" value="jitomate" readonly>
+                </div>
+                <div class="form-grupo">
+                    <label>Categoría</label>
+                    <select>
+                        <option>Selecciona una categoría</option>
+                    </select>
+                </div>
+                <div class="form-grupo">
+                    <label>Precio</label>
+                    <input type="text" value="$ 0.00" readonly>
+                </div>
+                <div class="form-grupo">
+                    <label>Unidad de Medida</label>
+                    <select>
+                        <option>Selecciona una unidad de medida</option>
+                    </select>
+                </div>
+                <div class="form-grupo">
+                    <label>Cantidad en Stock</label>
+                    <input type="text" placeholder="0.00 (ud, pz, kg, L, ml, m, caja, etc.)">
+                </div>
+                <div class="form-grupo">
+                    <label>Proveedor</label>
+                    <input type="text">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+        </main>
+        </body>
+        
+        </html>
+            
+            
+           

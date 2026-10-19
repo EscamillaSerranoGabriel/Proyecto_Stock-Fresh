@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilito/VentasEstilo.css"/>
+    </head>
+    <body style="background-color: white">
+        <header>
+            <div class="header-top">
+                <div class="logo-container">
+                    <img src="logo_fondo_gris.png" alt="Stock & Fresh" class="logo-img">
+                    <span>Stock & Fresh</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text"  placeholder="Buscar...">
+                </div>
+                <div class="user-actions">
+                <div class="logo-usuario">
+                    <img src="icono_usuario_circulo.png" alt="Stock & Fresh" class="avatar" onclick="verPerfil()">
+                </div>
+                <button class="iniciosesion" onclick="cargarMain()">HOME</button>
+                <span class="cart">$ 0.00</span>
+            </div>
+            </div>
+
+            <!-- FILA 2: Menú de navegación principal -->
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="Ventas.html">Registro de Ventas</a></li>
+                    <li><a href="Caja.html">Caja</a></li>
+                    <li><a href="gestioninventario.html">Gestión de Inventario</a></li>
+                    <li><a href="historial.html">Historial</a></li>
+                    <li><a href="reportesyg.html">Reportes y Gráficas</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="principal" >
+            <img src="naranja.png" alt="Naranja" class="fruta fruta-naranja">
+            <img src="manzana.png" alt="Manzana" class="fruta fruta-manzana">
+            <img src="aguacatepro.png" alt="Aguacate" class="fruta fruta-aguacate">
+            <img src="arandanos.png" alt="Arándanos" class="fruta fruta-arandanos">
+            <div class="ventas-wrapper">
+    <h1 class="titulo-inventario">Registro de Ventas</h1>
+    
+    <div class="cards-container">
+        
+        <!-- Tarjeta 1: Registrar Venta -->
+        <div class="venta-card">
+            <button class="btn-pill btn-green" onclick="RegistroVenta()">Registrar Venta</button>
+            <img src="recibo_pro.png" alt="Productos" class="img-tarjeta">
+        </div>
+
+        <!-- Tarjeta 2: Modificar Venta -->
+        <div class="venta-card">
+            <button class="btn-pill btn-yellow" onclick="VeraModificar()">Modificar Venta</button>
+            <img src="documento.png" alt="Productos" class="img-tarjeta">
+        </div>
+
+        <!-- Tarjeta 3: Ventas -->
+        <div class="venta-card">
+            <button class="btn-pill btn-green" onclick="VerVentas()">Ventas</button>
+            <img src="dinero.png" alt="Productos" class="img-tarjeta">
+        </div>
+
+        <!-- Tarjeta 4: Eliminar Venta -->
+        <div class="venta-card">
+            <button class="btn-pill btn-yellow" onclick="EliminarVenta()">Eliminar Venta</button>
+            <img src="papelera.png" alt="Productos" class="img-tarjeta">
+        </div>
+
+    </div>
+</div>
+        </main>
+        <footer class="site-footer">
+    <div class="footer-links">
+        <a href="#ubicacion">UBICACIÓN</a>
+        <a href="#contacto">INFORMACIÓN DE CONTACTO</a>
+        <a href="#opiniones">OPINIONES</a>
+        <a href="#eventos">EVENTOS</a>
+    </div>
+    <div class="footer-copy">
+        <p>&copy; 2026 Stock & Fresh. Todos los derechos reservados.</p>
+    </div>
+</footer>
+        
+        <script>
+            
+            function verPerfil() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('PerfilsinLocal.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+            
+            function cargarMain() {
+    // Opción A: Recarga la página principal del proyecto
+    window.location.href = "index.html";
+   
+}
+    function RegistroVenta() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('RegistrarVenta.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+    function EliminarVenta() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('EliminarVentas.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+        function VerVentas() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('VerVentas.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+        function VeraModificar() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('VerVaModificar.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+        function HacerCambios() {
+    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    fetch('ModificarVenta.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la vista de login');
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inserta el HTML del login dentro del <main>
+            document.querySelector('.principal').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function cambiarCantidad(producto, cambio) {
+        // Obtenemos el input correspondiente al producto usando su ID único
+        const input = document.getElementById('cnt-' + producto);
+        
+        // Convertimos el valor actual a número (si está vacío, toma 0)
+        let valorActual = parseInt(input.value) || 0;
+        
+        // Calculamos el nuevo valor sumando o restando
+        let nuevoValor = valorActual + cambio;
+        
+        // Evitamos que baje de 0
+        if (nuevoValor < 0) {
+            nuevoValor = 0;
+        }
+        
+        // Asignamos el nuevo valor al input
+        input.value = nuevoValor;
+    }
+   
+    // Variable global para saber qué elemento está seleccionado
+    let filaSeleccionadaGlobal = null;
+
+    function seleccionarVenta(elemento) {
+        // Restaura el color original a todas las filas de la pantalla
+        document.querySelectorAll('.venta-row-item').forEach(function(f) {
+            f.style.backgroundColor = ""; 
+            f.style.borderColor = "";
+        });
+        
+        // Pinta la fila que se presionó con el color guinda/oscuro
+        elemento.style.backgroundColor = "#5c1d29";
+        elemento.style.borderColor = "#2b0b11";
+        elemento.style.cursor = "pointer";
+        
+        // Guardamos la referencia para cuando presionen "Eliminar"
+        filaSeleccionadaGlobal = elemento;
+        
+        console.log("¡Fila seleccionada correctamente mediante onclick directo!");
+    }
+</script>
+        

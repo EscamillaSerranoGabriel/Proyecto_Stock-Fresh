@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes y Gráficas - Stock & Fresh</title>
+    <!-- Asegúrate de incluir la hoja de estilos de gestión/ventas -->
+    <link rel="stylesheet" href="estilito/reportesyg.css"/>
+</head>
+<body>
+    <!-- ================= ENCABEZADO / NAVBAR ================= -->
+    <header class="header-nav">
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="logo_fondo_gris.png" alt="Stock & Fresh" class="logo-img">
+                <span>Stock & Fresh</span>
+            </div>
+
+            <div class="search-container">
+                <input type="text" placeholder="Buscar...">
+            </div>
+
+            <div class="user-actions">
+                <img src="icono_usuario_circulo.png" alt="Usuario" class="avatar" onclick="verPerfil()">
+                <button class="iniciosesion" onclick="cargarMain()">HOME</button>
+                <span class="cart-status">$ 0.00</span>
+            </div>
+        </div>
+
+        <nav class="header-nav">
+            <ul>
+                <li><a href="Ventas.html">Registro de Ventas</a></li>
+                <li><a href="Caja.html">Caja</a></li>
+                <li><a href="gestioninventario.html">Gestión de Inventario</a></li>
+                <li><a href="historial.html">Historial</a></li>
+                <li><a href="reportesyg.html">Reportes y Gráficas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= CONTENIDO CENTRAL ================= -->
+    <main class="principal">
+
+        <!-- Frutas Decorativas Flotantes (En las orillas) -->
+        <img src="naranja.png" alt="Naranja" class="fruta fruta-naranja">
+        <img src="manzana.png" alt="Manzana" class="fruta fruta-manzana">
+        <img src="aguacatepro.png" alt="Aguacate" class="fruta fruta-aguacate">
+        <img src="arandanos.png" alt="Arándanos" class="fruta fruta-arandanos">
+
+        <!-- Título Superior Centrado -->
+        <div class="header-titulo-seccion">
+            <h2 class="titulo-reporte">Reportes y Gráficas</h2>
+        </div>
+
+        <!-- Panel de Gráficas y Métricas -->
+        <div class="contenedor-edicion">
+            
+            <!-- Panel Izquierdo: Gráfica -->
+            <div class="panel-edicion">
+                <div class="panel-cabecera">
+                    <h3 class="panel-titulo">Gráfica del...</h3>
+                    <select class="combo-filtro">
+                        <option value="">Selecciona una opción</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                    </select>
+                </div>
+
+                <div class="area-grafica">
+                    <!-- Canvas o contenedor donde se renderiza la gráfica -->
+                    <canvas id="miGrafica"></canvas>
+                </div>
+            </div>
+
+            <!-- Panel Derecho: Información/Resumen -->
+            <div class="panel-edicion">
+                <h3 class="panel-titulo">Información del ---</h3>
+
+               <div class="lista-metricas">
+    
+    <!-- Ninguna tiene la clase 'activa' -->
+    <div class="tarjeta-metrica" onclick="seleccionarMetrica(this, 'ventas')">
+        <div class="icono-metrica"><span class="emoji-icono">💰</span></div>
+        <div class="info-metrica"><span class="lbl-metrica">Total de ventas</span></div>
+    </div>
+
+    <div class="tarjeta-metrica" onclick="seleccionarMetrica(this, 'transacciones')">
+        <div class="icono-metrica"><span class="emoji-icono">🧾</span></div>
+        <div class="info-metrica"><span class="lbl-metrica">Total de Transacciones</span></div>
+    </div>
+
+    <div class="tarjeta-metrica" onclick="seleccionarMetrica(this, 'productos')">
+        <div class="icono-metrica"><span class="emoji-icono">📦</span></div>
+        <div class="info-metrica"><span class="lbl-metrica">Total de Productos</span></div>
+    </div>
+
+</div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ================= PIE DE PÁGINA ================= -->
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="#ubicacion">UBICACIÓN</a>
+            <a href="#contacto">INFORMACIÓN DE CONTACTO</a>
+            <a href="#opiniones">OPINIONES</a>
+            <a href="#eventos">EVENTOS</a>
+        </div>
+        <p class="copyright-texto">© 2026 Stock & Fresh. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+    function seleccionarMetrica(elemento, tipoMetrica) {
+        // 1. Quitar la clase 'activa' de todas las métricas
+        const metricas = document.querySelectorAll('.tarjeta-metrica');
+        metricas.forEach(m => m.classList.remove('activa'));
+
+        // 2. Marcar solo la tarjeta a la que se dio clic
+        elemento.classList.add('activa');
+
+        // 3. Acción o función que se ejecutará en base a la selección
+        console.log("Métrica seleccionada:", tipoMetrica);
+    }
+    function cargarMain() {
+    // Opción A: Recarga la página principal del proyecto
+    window.location.href = "index.html";
+   
+}
+</script>
+</body>
+</html>

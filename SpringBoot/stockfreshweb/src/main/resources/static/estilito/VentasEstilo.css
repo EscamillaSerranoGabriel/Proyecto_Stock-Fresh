@@ -1,0 +1,1081 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* ==========================================
+   HEADER / ENCABEZADO
+   ========================================== */
+header {
+    width: 100%;
+}
+
+.header-top {
+    background-color: #8CBF3F;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    height: 75px;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-container img, 
+.logo-img {
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.logo-container span {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: serif;
+}
+
+.search-bar {
+    flex-grow: 0.4;
+    max-width: 500px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #555;
+    box-sizing: border-box;
+}
+
+/* Grupo derecho: Avatar, Saldo y Botón HOME perfectamente alineados en fila */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-usuario {
+    display: flex;
+    align-items: center;
+}
+
+.logo-usuario img, 
+.user-actions img, 
+.avatar {
+    width: 45px !important;
+    height: 45px !important;
+    min-width: 45px !important;
+    min-height: 45px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    cursor: pointer;
+}
+
+.iniciosesion {
+    background-color: #72A633;
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.iniciosesion:hover {
+    background-color: #5f8d29;
+}
+
+.cart {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: inline-block;
+}
+
+/* ==========================================
+   NAVEGACIÓN (MENÚ DE COLORES)
+   ========================================== */
+.header-nav {
+    width: 100%;
+    background-color: #EBB832;
+}
+
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    height: 55px;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav ul li {
+    flex: 1;
+    display: flex;
+}
+
+.header-nav ul li a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* Colores de las pestañas */
+.header-nav ul li:nth-child(1) { background-color: #EBB832; }
+.header-nav ul li:nth-child(2) { background-color: #DB5461; }
+.header-nav ul li:nth-child(3) { background-color: #48A14D; }
+.header-nav ul li:nth-child(4) { background-color: #0056B3; }
+.header-nav ul li:nth-child(5) { background-color: #B22222; }
+
+/* ==========================================
+   CONTENIDO PRINCIPAL (MAIN) Y FRUTAS FLOTANTES
+   ========================================== */
+.principal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 40px 20px 40px; /* Aumentamos el padding lateral para que el texto/logo respire */
+    width: 100%;
+    max-width: 100%;
+    height: calc(100vh - 120px); /* Ajuste preciso para que el footer no se corte */
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 45px;
+}
+
+/* Estilo general y posiciones de las frutas */
+.fruta {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none; /* Para que no estorben al hacer clic */
+}
+
+.fruta-naranja {
+    top: 10px;
+    left: 10px;
+    width: 170px;
+}
+
+.fruta-manzana {
+    bottom: -30px;
+    left: 0px;
+    width: 230px;
+}
+
+.fruta-pera {
+    top: 5px;
+    left: 41%;
+    width: 200px;
+}
+
+.fruta-zanahoria {
+    bottom: 50px;
+    left: 52%;
+    width: 210px;
+}
+
+.fruta-aguacate {
+    top: -0px;
+    right: -0px;
+    width: 170px;
+}
+
+.fruta-arandanos {
+    bottom: -30px;
+    right: 0px;
+    width: 230px;
+}
+
+.site-footer {
+    background-color: #C3EC8F;
+    padding: 12px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 4px;
+}
+
+.footer-links a {
+    color: #4A6B1A;
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.footer-copy p {
+    font-size: 12px;
+    color: #3b5712;
+    margin: 0;
+}
+
+/* Logo principal de la izquierda */
+.logo-container img, 
+.logo-img {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+}
+
+/* Barra y campo de búsqueda */
+.search-bar {
+    flex-grow: 0.4;
+    max-width: 500px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #555;
+    box-sizing: border-box;
+}
+
+/* Avatar del usuario en la esquina derecha */
+.logo-usuario img, 
+.user-actions img, 
+.avatar {
+    width: 45px !important;
+    height: 45px !important;
+    min-width: 45px !important;
+    min-height: 45px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    cursor: pointer;
+}
+
+/* Agrupa los elementos de la derecha ordenados en fila */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Control estricto para que la foto de usuario mantenga su tamaño redondo de 45px */
+.logo-usuario img, 
+.avatar {
+    width: 45px !important;
+    height: 45px !important;
+    min-width: 45px !important;
+    min-height: 45px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    cursor: pointer;
+}
+
+/*estilomain*/
+
+.ventas-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.titulo-inventario {
+    color: #D65A70; /* Color similar al de tu imagen */
+    font-family: "Times New Roman", Times, serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 50px;
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 40px;
+    align-items: flex-start;
+    align-self: center;
+}
+
+.venta-card {
+   background: #ffffff;
+    border: 2px solid #e8a5a5;
+    border-radius: 20px;
+    width: 300px;
+    min-width: 300px;
+    height: 300px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    position: relative;
+    flex-shrink: 0;
+    align-self: flex-start;
+    cursor: pointer; /* Muestra la "manita" para indicar que es un botón */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Efecto visual suave */
+    
+}
+.venta-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.btn-pill {
+    padding: 12px 18px; /* Botones más altos y grandes */
+    border: none;
+    border-radius: 22px;
+    font-size: 15px; /* Texto del botón más grande */
+    font-weight: bold;
+    color: #222;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    width: 94%; /* Botones más anchos dentro de la tarjeta */
+    text-align: center;
+    transition: transform 0.1s;
+}
+
+.btn-pill:hover {
+    transform: scale(1.02);
+}
+
+.btn-green {
+    background-color: #b8e994;
+}
+
+.btn-yellow {
+    background-color: #f6b93b;
+    color: #111;
+}
+
+.icon-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;      /* Ancho estándar fijo para que ambas midan lo mismo horizontalmente */
+    height: 300px;     /* Alto fijo para asegurar que no se disparen */
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.img-tarjeta {
+    width: 250px;      /* Ancho estándar fijo para que ambas midan lo mismo horizontalmente */
+    height: 170px;     /* Alto fijo para asegurar que no se disparen */
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+/*estiloRegistroVenta.html*/
+
+/* Contenedor general de la vista */
+.registrar-venta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.section-title {
+    color: #D65A70; /* Color similar al de tu imagen */
+    font-family: "Times New Roman", Times, serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 20px;
+    text-align: center;
+}
+
+/* CONTENEDOR VERTICAL: Alinea las dos tarjetas una debajo de la otra */
+.ventas-main-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 25px !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    box-sizing: border-box;
+}
+
+/* Estilos comunes para ambas tarjetas */
+.productos-card{
+    width: 550px !important;
+    min-width: 550px !important;
+    background: #ffffff;
+    border: 2px solid #ebdcb8;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.checkout-card {
+    width: 600px !important;
+    min-width: 600px !important;
+    background: #ffffff;
+    border: 2px solid #ebdcb8;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Tarjeta Izquierda (Productos) */
+.productos-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Tarjeta Derecha (Checkout / Totales) con diseño interno de dos columnas */
+.checkout-card {
+    display: flex;
+    gap: 25px;
+}
+
+/* --- Elementos Internos de la Tarjeta Izquierda --- */
+.productos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productos-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e8a5a5;
+    border-radius: 20px;
+    padding: 6px 12px;
+    background-color: #fffcfc;
+    width: 240px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 13px;
+    width: 100%;
+}
+
+.productos-grid-container {
+    border: 1.5px solid #e8a5a5;
+    border-radius: 14px;
+    padding: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.prod-item-card {
+    background: #ffffff;
+    border: 1px solid #ebdcb8;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.prod-info {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.prod-name {
+    font-size: 12px;
+    font-weight: bold;
+    color: #222;
+    display: block;
+}
+
+.prod-price {
+    font-size: 11px;
+    color: #555;
+}
+
+.prod-img {
+    font-size: 32px;
+    margin: 5px 0;
+}
+
+.counter-box {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 5px;
+}
+
+.cnt-btn {
+    background: transparent;
+    border: none;
+    color: #b84a4a;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cnt-input {
+    width: 35px;
+    height: 20px;
+    border: 1px solid #e8a5a5;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    font-size: 11px;
+    background-color: #fffcfc;
+}
+
+/* --- Elementos Internos de la Tarjeta Derecha --- */
+.checkout-left-col, 
+.checkout-right-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+}
+
+.checkout-divider {
+    width: 2px;
+    background-image: linear-gradient(to bottom, #e8a5a5 50%, transparent 50%);
+    background-size: 2px 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 3px;
+}
+
+.form-control {
+    padding: 7px 10px;
+    border: 1px solid #e8a5a5;
+    border-radius: 6px;
+    outline: none;
+    font-size: 13px;
+    background-color: #fffcfc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    border-color: #b84a4a;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #222;
+    margin: 2px 0;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.payment-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 2px;
+}
+
+.radio-label {
+    font-size: 12px;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.select-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 24 24' width='16' height='16' fill='%23b84a4a' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+}
+
+.btn-realizar-venta {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 5px;
+    transition: opacity 0.2s;
+}
+
+.btn-realizar-venta:hover {
+    opacity: 0.9;
+}
+
+/*boton en modificar venta*/
+.btn-realizar-cambio {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 5px;
+    transition: opacity 0.2s;
+}
+
+.btn-realizar-cambio:hover {
+    opacity: 0.9;
+}
+
+/*DiseñoEliminarVentas.html*/
+.eliminar-venta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #b84a4a;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.eliminar-card {
+    background: #ffffff;
+    border: 2px solid #ebdcb8;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.eliminar-card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+}
+
+.ventas-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 380px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.venta-row-item {
+    background-color: #d9534f;
+    border-radius: 10px;
+    padding: 14px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.venta-row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.venta-row-bottom {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.venta-text {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.btn-eliminar {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    align-self: center;
+    margin-top: 10px;
+    transition: opacity 0.2s;
+}
+
+.btn-eliminar:hover {
+    opacity: 0.9;
+}
+
+/*Diseño VerVentas.html*/
+.ventas-historial-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #b84a4a;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.historial-card {
+    background: #ffffff;
+    border: 2px solid #ebdcb8;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.historial-card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+}
+
+.historial-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 450px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.venta-detalle-box {
+    background: #ffffff;
+    border: 1.5px solid #e8a5a5;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.detalle-col-left,
+.detalle-col-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detalle-divider {
+    width: 2px;
+    background-image: linear-gradient(to bottom, #e8a5a5 50%, transparent 50%);
+    background-size: 2px 10px;
+}
+
+.detalle-text {
+    font-size: 13px;
+    font-weight: bold;
+    color: #222;
+}
+
+.productos-seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 5px;
+}
+
+.productos-label-title {
+    margin-bottom: 0;
+}
+
+.productos-scroll-box {
+    border: 1.5px solid #e8a5a5;
+    border-radius: 8px;
+    height: 90px;
+    background-color: #fffcfc;
+    overflow-y: auto;
+}
+
+/*Diseño VerVaModificar*/
+
+/* Estilo base de la barra */
+.venta-row-item {
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    /* (Mantén aquí los demás estilos de tamaño, color rojo original, bordes, etc. que ya tengas) */
+}
+
+/* Cambia de color automáticamente cuando el radio interno esté seleccionado */
+.venta-row-item:has(input[type="radio"]:checked) {
+    background-color: #5c1d29 !important;
+    border-color: #2b0b11 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.01);
+}
+.modificar-venta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #b84a4a;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.modificar-card {
+    background: #ffffff;
+    border: 2px solid #ebdcb8;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.modificar-card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+}
+
+.modificar-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 450px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.venta-modificar-box {
+    background: #ffffff;
+    border: 1.5px solid #e8a5a5;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    position: relative; /* Permite posicionar el botón de edición de forma absoluta si se desea */
+}
+
+.detalle-col-left,
+.detalle-col-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative; /* Necesario para anclar el botón de editar abajo a la derecha */
+}
+
+.detalle-divider {
+    width: 2px;
+    background-image: linear-gradient(to bottom, #e8a5a5 50%, transparent 50%);
+    background-size: 2px 10px;
+}
+
+.detalle-text {
+    font-size: 13px;
+    font-weight: bold;
+    color: #222;
+}
+
+.productos-seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 5px;
+}
+
+.productos-label-title {
+    margin-bottom: 0;
+}
+
+.productos-scroll-box {
+    border: 1.5px solid #e8a5a5;
+    border-radius: 8px;
+    height: 90px;
+    background-color: #fffcfc;
+    overflow-y: auto;
+}
+
+/* Estilo para el botón flotante del lápiz de edición */
+.btn-editar-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #ffffff;
+    border: 1.5px solid #e8a5a5;
+    border-radius: 8px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: background-color 0.2s;
+}
+
+.btn-editar-icon:hover {
+    background-color: #fff6f6;
+}
+/*diseño frutas*/
+.fruta-manzana {
+    bottom: -30px;
+    left: 0px;
+    width: 230px;
+}
+
+.fruta-pera {
+    top: 5px;
+    left: 41%;
+    width: 200px;
+}
+
+.fruta-zanahoria {
+    bottom: 50px;
+    left: 52%;
+    width: 210px;
+}
+
+.fruta-aguacate {
+    top: -0px;
+    right: -0px;
+    width: 170px;
+}
+
+.fruta-arandanos {
+    bottom: -30px;
+    right: 0px;
+    width: 230px;
+}
+
+

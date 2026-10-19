@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Producto - Stock & Fresh</title>
+    <link rel="stylesheet" href="estilito/gestion.css"/>
+</head>
+<body>
+
+    <!-- CONTENIDO CENTRAL -->
+    <main class="principal">
+
+        <!-- Frutas Flotantes en las Orillas -->
+        <img src="naranja.png" alt="Naranja" class="fruta fruta-naranja">
+        <img src="manzana.png" alt="Manzana" class="fruta fruta-manzana">
+        <img src="aguacatepro.png" alt="Aguacate" class="fruta fruta-aguacate">
+        <img src="arandanos.png" alt="Arándanos" class="fruta fruta-arandanos">
+
+        <!-- Título Superior Centrado -->
+        <div class="header-titulo-seccion">
+            <h2 class="titulo-inventario">Eliminar Producto</h2>
+        </div>
+
+        <!-- Contenedor Principal de la Interfaz -->
+        <div class="contenedor-edicion">
+            <div class="panel-eliminar-container">
+                <h3 class="panel-titulo">Productos</h3>
+
+              <!-- Lista con Scroll -->
+                    <!-- Lista con Scroll -->
+<div class="lista-productos-eliminar">
+    
+    <!-- Tarjeta 1 (Clickable para seleccionar) -->
+<div class="tarjeta-item-eliminar" onclick="
+    document.querySelectorAll('.tarjeta-item-eliminar').forEach(function(item) {
+        item.style.backgroundColor = '';
+        item.style.borderColor = '';
+    });
+    this.style.backgroundColor = '#fce8e6';
+    this.style.borderColor = '#d65a70';
+">
+    <span class="icono-producto-emoji">🍎</span>
+    <div class="info-prod-detalles">
+        <span class="lbl-info"><strong>Nombre:</strong> Manzana</span>
+        <span class="lbl-info"><strong>U/medida:</strong> kg</span>
+    </div>
+    <div class="info-prod-detalles">
+        <span class="lbl-info"><strong>Precio:</strong> $25.00</span>
+        <span class="lbl-info"><strong>Stock:</strong> 120</span>
+    </div>
+</div>
+
+<!-- Tarjeta 2 -->
+<div class="tarjeta-item-eliminar" onclick="
+    document.querySelectorAll('.tarjeta-item-eliminar').forEach(function(item) {
+        item.style.backgroundColor = '';
+        item.style.borderColor = '';
+    });
+    this.style.backgroundColor = '#fce8e6';
+    this.style.borderColor = '#d65a70';
+">
+    <span class="icono-producto-emoji">🍎</span>
+    <div class="info-prod-detalles">
+        <span class="lbl-info"><strong>Nombre:</strong> Jitomate</span>
+        <span class="lbl-info"><strong>U/medida:</strong> kg</span>
+    </div>
+    <div class="info-prod-detalles">
+        <span class="lbl-info"><strong>Precio:</strong> $30.00</span>
+        <span class="lbl-info"><strong>Stock:</strong> 85</span>
+    </div>
+</div>
+
+    <!-- Tarjeta 3 -->
+<div class="tarjeta-item-eliminar" onclick="
+    document.querySelectorAll('.tarjeta-item-eliminar').forEach(function(item) {
+        item.style.backgroundColor = '';
+        item.style.borderColor = '';
+    });
+    this.style.backgroundColor = '#fce8e6';
+    this.style.borderColor = '#d65a70';
+">
+    <span class="icono-producto-emoji">🍉</span>
+    <div class="info-prod-detalles">
+        <span class="lbl-info"><strong>Nombre:</strong> Sandía</span>
+        <span class="lbl-info"><strong>U/medida:</strong> pz</span>
+    </div>
+    <div class="info-prod-detalles">
+        <span class="lbl-info"><strong>Precio:</strong> $50.00</span>
+        <span class="lbl-info"><strong>Stock:</strong> 15</span>
+    </div>
+</div>
+
+</div>
+
+                <!-- Botón de Acción -->
+                <button type="button" class="btn-eliminar-accion">Eliminar</button>
+            </div>
+        </div>
+
+    </main>
+
+
+</body>
+</html>

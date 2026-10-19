@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="estilito/CajaEstilo.css"/>
+<div class="apertura-caja-wrapper">
+    <h2 class="titulo-inventario">Apertura de Caja</h2>
+    <img src="naranja.png" alt="Naranja" class="fruta fruta-naranja">
+        <img src="manzana.png" alt="Manzana" class="fruta fruta-manzana">
+        <img src="aguacatepro.png" alt="Aguacate" class="fruta fruta-aguacate">
+        <img src="arandanos.png" alt="Arándanos" class="fruta fruta-arandanos">
+    
+    <div class="apertura-card">
+        <!-- Columna Izquierda -->
+        <div class="apertura-col-left">
+            <div class="form-group">
+                <label>Fondo Inicial</label>
+                <input type="text" class="form-control" value="$ 0.00">
+            </div>
+
+            <div class="form-group">
+                <label>Fecha</label>
+                <div class="input-icon-wrapper">
+                    <input type="date" class="form-control" >
+                    
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Hora</label>
+                <div class="input-icon-wrapper">
+                    <input type="time" class="form-control">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="apertura-divider"></div>
+
+        <!-- Columna Derecha -->
+        <div class="apertura-col-right">
+            <div class="form-group">
+                <label>Empleado</label>
+                <select class="form-control select-control">
+                    <option value="" disabled selected>Selecciona un empleado</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>No. Caja</label>
+                <select class="form-control select-control">
+                    <option value="" disabled selected>Selecciona una Caja/Turno</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Turno</label>
+                <select class="form-control select-control">
+                    <option value="" disabled selected>Selecciona una Caja/Turno</option>
+                </select>
+            </div>
+
+            <button class="btn-aperturar">Aperturar</button>
+        </div>
+    </div>
+</div>
