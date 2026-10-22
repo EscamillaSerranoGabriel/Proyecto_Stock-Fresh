@@ -26,12 +26,14 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
+        working-directory: ./SpringBoot
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          # CORRECCIÓN 1: Apuntar a la ruta correcta dentro de SpringBoot
+          path: '${{ github.workspace }}/SpringBoot/target/*.jar'
 
   deploy:
     runs-on: windows-latest
@@ -45,7 +47,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: java-app
-      
+          
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -59,5 +61,5 @@ jobs:
         with:
           app-name: 'ProyectoStockFreshVi'
           slot-name: 'Production'
+          # CORRECCIÓN 2: Asegurar que tome el jar descargado en la raíz del workspace de este job
           package: '*.jar'
-          
