@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: windows-latest
     permissions:
-      contents: read #This is required for actions/checkout
+      contents: read # Required for actions/checkout
 
     steps:
       - uses: actions/checkout@v4
@@ -24,30 +24,30 @@ jobs:
           java-version: '17'
           distribution: 'microsoft'
 
+      # Se ejecuta Maven desde la raíz del repositorio clonado
       - name: Build with Maven
         run: mvn clean install
-        working-directory: ./SpringBoot
 
+      # Sube el JAR generado en la carpeta target
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: java-app
-          # CORRECCIÓN 1: Apuntar a la ruta correcta dentro de SpringBoot
-          path: '${{ github.workspace }}/SpringBoot/target/*.jar'
+          path: '${{ github.workspace }}/target/*.jar'
 
   deploy:
     runs-on: windows-latest
     needs: build
     permissions:
-      id-token: write #This is required for requesting the JWT
-      contents: read #This is required for actions/checkout
+      id-token: write # Required for requesting the JWT
+      contents: read # Required for actions/checkout
 
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
           name: java-app
-          
+
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -61,5 +61,4 @@ jobs:
         with:
           app-name: 'ProyectoStockFreshVi'
           slot-name: 'Production'
-          # CORRECCIÓN 2: Asegurar que tome el jar descargado en la raíz del workspace de este job
           package: '*.jar'
