@@ -1,22 +1,23 @@
 <link rel="stylesheet" href="estilito/css.css">
-            <div class="main-content">
-                <h1>¡Inicia sesión en <br><span>Stock & Fresh y </span><span>retoma el control de</span><span>tu negocio!</span></h1>
-        
+<script src="inisio_sesion.js"></script>
+<main>
+    <div class="main-content">
+        <h1>¡Inicia sesión en <br><span>Stock & Fresh y </span><span>retoma el control de</span><span>tu negocio!</span></h1>
         <p>Ingresa tu ID de Locatario y contraseña para
         acceder a tu cuenta.</p>
-            </div>
+    </div>
             <img src="naranja.png" alt="Naranja" class="fruta fruta-naranja">
             <img src="manzana.png" alt="Manzana" class="fruta fruta-manzana">
             <img src="pera_pro.png" alt="Pera" class="fruta fruta-pera-2">
             <img src="zanahoria_pro.png" alt="Zanahoria" class="fruta fruta-zanahoria">
             <img src="aguacatepro.png" alt="Aguacate" class="fruta fruta-aguacate">
             <img src="arandanos.png" alt="Arándanos" class="fruta fruta-arandanos">
-
-<div class="main-form-container">
-    <form onsubmit="iniciarSesion(event)">
-        <input type="text" id="idLocatario" placeholder="ID de Locatario" required>
-        <input type="password" id="inputPassword" placeholder="Contraseña" required>
-        <button type="submit">Iniciar Sesión</button>
-    </form>
-<script src="inisio_sesion.js"></script>
-</div>
+            
+            <div class="main-form-container">
+                <form onsubmit="iniciarSesion(event)">
+                    <input type="text" id="idLocatario" placeholder="ID de Locatario" required>
+                    <input type="password" id="inputPassword" placeholder="Contraseña" required>
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+            </div>
+</main>

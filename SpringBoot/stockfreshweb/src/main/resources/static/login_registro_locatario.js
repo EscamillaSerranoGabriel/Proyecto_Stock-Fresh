@@ -3,9 +3,8 @@ function cargarMain() {
     window.location.href = "index.html";
    
 }
-
 function cargarLogin() {
-    // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
+    // 'Opción B: Cargar Incio de Sesión 
     fetch('InicioSesion.html')
         .then(response => {
             if (!response.ok) {
@@ -21,22 +20,21 @@ function cargarLogin() {
             console.error('Error:', error);
         });
 }
-    function cargarRegistro(){
+function cargarRegistro(){
     fetch('Registro.html')
         .then(response => {
             if (!response.ok) {
-                throw new Error('No se pudo cargar la vista de login');
+                throw new Error('No se pudo cargar la vista de registro');
             }
             return response.text();
         })
         .then(html => {
-            // Inserta el HTML del login dentro del <main>
             document.querySelector('.principal').innerHTML = html;
         })
         .catch(error => {
             console.error('Error:', error);
         });
-    }
+}
 
 function verPerfil() {
     // 'login.html' es la ruta de tu archivo con el formulario de inicio de sesión
@@ -90,4 +88,18 @@ function PerfilListo() {
         .catch(error => {
             console.error('Error:', error);
         });
+}
+function cargarDatosRegisto() {
+    fetch('DatosRegistro.html').then(response => {
+        if(!response.ok){
+            throw new Error('Página no disponible');
+        }
+        return response.text();
+    })
+    .then(html =>{
+        document.querySelector('.principal').innerHTML = html;
+    })
+    .catch(error=>{
+        console.error('Error', error);
+    })
 }

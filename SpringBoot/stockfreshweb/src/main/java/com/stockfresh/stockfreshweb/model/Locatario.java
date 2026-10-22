@@ -21,6 +21,9 @@ private String idLocatario;
     
     @Column(name = "numeroCelular", nullable = true, length = 15)
     private String numeroCelular;
+    
+    @Column(name = "rol", nullable = false, length = 20)
+    private String rol = "Locatario";
 
     // Constructor vacío obligatorio para JPA
     public Locatario() {}
@@ -35,9 +38,7 @@ private String idLocatario;
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
 
-    public String getCorreoElectronico() {
-        return correoElectronico;
-    }
+    public String getCorreoElectronico() { return correoElectronico; }
 
     public void setCorreoElectronico(String correoElectronico) {
         this.correoElectronico = correoElectronico;
@@ -50,5 +51,12 @@ private String idLocatario;
     public void setNumeroCelular(String numeroCelular) {
         this.numeroCelular = numeroCelular;
     }
-    
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
 }

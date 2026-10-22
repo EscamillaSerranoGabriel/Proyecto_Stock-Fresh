@@ -1,5 +1,4 @@
-async function iniciarSesion(event) {
-    event.preventDefault();
+document.addEventListener('submit', async function (e) {
 
     const id = document.getElementById('idLocatario').value.trim();
     const contrasena = document.getElementById('inputPassword').value;
@@ -16,7 +15,7 @@ async function iniciarSesion(event) {
             alert('¡Bienvenido ' + locatario.nombre + '!');
 
             localStorage.setItem('idLocatario', locatario.idLocatario);
-            window.location.href = '/dashboard.html';
+            window.location.href = '/InicioSesion.html';
         } else if (respuesta.status === 401) {
             alert('ID o contraseña incorrectos.');
         } else {
@@ -26,4 +25,4 @@ async function iniciarSesion(event) {
         console.error(error);
         alert('No se pudo conectar con el servidor.');
     }
-}
+});
